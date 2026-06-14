@@ -121,7 +121,7 @@ out body;`
 const HikingQueryTemplate = `
 [out:json][timeout:15];
 (
-  node["natural"~"peak|saddle|water"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["natural"~"peak|saddle|water"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
   node["natural"="lake"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
 
   node["tourism"="alpine_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
