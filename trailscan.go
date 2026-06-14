@@ -1,6 +1,9 @@
 package trailscan
 
 import (
+	"bytes"
+	"cmp"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -9,14 +12,9 @@ import (
 	"runtime"
 	"strconv"
 	"strings"
+	"text/template"
 
 	"github.com/tkrajina/gpxgo/gpx"
-)
-
-const (
-	// Matching settings
-	PeakMatchDistanceMeters = 50.0
-	MaxElevationDifference  = 30.0
 )
 
 type Point struct {
@@ -32,16 +30,17 @@ type BoundingBox struct {
 	MaxLon float64
 }
 
-type Peak struct {
+type Amenity struct {
 	ID   int64
 	Name string
+	Type string
 	Ele  float64
 	Lat  float64
 	Lon  float64
 }
 
-type VisitedPeak struct {
-	Peak           Peak
+type VisitedAmenity struct {
+	Amenity        Amenity
 	Distance       float64
 	TrackElevation float64
 }
@@ -52,8 +51,11 @@ type OverpassResponse struct {
 		Lat  float64 `json:"lat"`
 		Lon  float64 `json:"lon"`
 		Tags struct {
-			Name string `json:"name"`
-			Ele  string `json:"ele"`
+			Name    string `json:"name"`
+			Natural string `json:"natural"`
+			Place   string `json:"place"`
+			Tourism string `json:"tourism"`
+			Ele     string `json:"ele"`
 		} `json:"tags"`
 	} `json:"elements"`
 }
@@ -102,24 +104,67 @@ func LoadGPX(gpxReader io.Reader) ([]Point, BoundingBox, error) {
 	return points, bbox, nil
 }
 
-func FetchPeaks(bbox BoundingBox) ([]Peak, error) {
-	query := fmt.Sprintf(`
-[out:json][timeout:10];
-node["natural"="peak"](%f,%f,%f,%f);
-out body;`,
-		bbox.MinLat,
-		bbox.MinLon,
-		bbox.MaxLat,
-		bbox.MaxLon,
-	)
-	query = strings.ReplaceAll(query, "\n", "")
+type FetchOptions struct {
+	QueryTemplate string
+	Endpoint      string
+}
+
+const PeaksQueryTemplate = `
+[out:json][timeout:15];
+node["natural"="peak"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+out body;`
+
+const HikingQueryTemplate = `
+[out:json][timeout:15];
+(
+  node["natural"~"peak|saddle|water"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["natural"="lake"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+
+  node["tourism"="alpine_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["tourism"="wilderness_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["amenity"="shelter"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+
+  node["tourism"="viewpoint"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+);
+out body;`
+
+const VillagesQueryTemplate = `
+[out:json][timeout:15];
+
+node[place~"city|town|village"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+
+out body;`
+
+const CyclingQueryTemplate = `
+[out:json][timeout:15];
+(
+  node[place~"city|town|village"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["natural"="saddle"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+
+  node["tourism"="viewpoint"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+);
+out body;`
+
+func DefaultFetchOptions() FetchOptions {
+	return FetchOptions{
+		QueryTemplate: PeaksQueryTemplate,
+		Endpoint:      "https://overpass-api.de/api/interpreter",
+	}
+}
+
+func FetchAmenities(ctx context.Context, bbox BoundingBox, op FetchOptions) ([]Amenity, error) {
+	queryBuf := new(bytes.Buffer)
+	err := template.Must(template.New("query").Parse(op.QueryTemplate)).ExecuteTemplate(queryBuf, "query", bbox)
+	if err != nil {
+		return nil, fmt.Errorf("error templating query: %w", err)
+	}
+
+	query := strings.ReplaceAll(queryBuf.String(), "\n", "")
 	query = strings.ReplaceAll(query, "\t", "")
 
-	endpoint := "https://overpass-api.de/api/interpreter"
-
-	req, err := http.NewRequest(
+	req, err := http.NewRequestWithContext(ctx,
 		http.MethodPost,
-		endpoint,
+		op.Endpoint,
 		strings.NewReader(query),
 	)
 	if err != nil {
@@ -138,7 +183,7 @@ out body;`,
 
 	if resp.StatusCode != 200 {
 		body, _ := io.ReadAll(resp.Body)
-		return nil, fmt.Errorf("overpass error: %s\n%s", resp.Status, string(body))
+		return nil, fmt.Errorf("overpass api error: %s\n%s", resp.Status, string(body))
 	}
 
 	var result OverpassResponse
@@ -146,7 +191,7 @@ out body;`,
 		return nil, err
 	}
 
-	var peaks []Peak
+	amenities := make([]Amenity, 0, len(result.Elements))
 
 	for _, e := range result.Elements {
 		var ele float64
@@ -154,8 +199,9 @@ out body;`,
 			ele, _ = strconv.ParseFloat(e.Tags.Ele, 64)
 		}
 
-		peaks = append(peaks, Peak{
+		amenities = append(amenities, Amenity{
 			ID:   e.ID,
+			Type: cmp.Or(e.Tags.Natural, e.Tags.Place, e.Tags.Tourism),
 			Name: e.Tags.Name,
 			Ele:  ele,
 			Lat:  e.Lat,
@@ -163,13 +209,25 @@ out body;`,
 		})
 	}
 
-	return peaks, nil
+	return amenities, nil
 }
 
-func FindVisitedPeaks(candidates []Point, peaks []Peak) []VisitedPeak {
-	var results []VisitedPeak
+type FindOptions struct {
+	MaxDistanceMeters      float64
+	MaxElevationDifference float64
+}
 
-	for _, peak := range peaks {
+func DefaultFindOptions() FindOptions {
+	return FindOptions{
+		MaxDistanceMeters:      50,
+		MaxElevationDifference: 30,
+	}
+}
+
+func FindVisitedAmenities(candidates []Point, amenities []Amenity, op FindOptions) []VisitedAmenity {
+	var results []VisitedAmenity
+
+	for _, amenity := range amenities {
 		bestDistance := math.MaxFloat64
 		bestElevation := 0.0
 
@@ -177,8 +235,8 @@ func FindVisitedPeaks(candidates []Point, peaks []Peak) []VisitedPeak {
 			d := haversine(
 				p.Lat,
 				p.Lon,
-				peak.Lat,
-				peak.Lon,
+				amenity.Lat,
+				amenity.Lon,
 			)
 
 			if d < bestDistance {
@@ -187,17 +245,17 @@ func FindVisitedPeaks(candidates []Point, peaks []Peak) []VisitedPeak {
 			}
 		}
 
-		if bestDistance > PeakMatchDistanceMeters {
+		if bestDistance > op.MaxDistanceMeters {
 			continue
 		}
 
-		if peak.Ele > 0 &&
-			math.Abs(bestElevation-peak.Ele) > MaxElevationDifference {
+		if amenity.Ele > 0 &&
+			math.Abs(bestElevation-amenity.Ele) > op.MaxElevationDifference {
 			continue
 		}
 
-		results = append(results, VisitedPeak{
-			Peak:           peak,
+		results = append(results, VisitedAmenity{
+			Amenity:        amenity,
 			Distance:       bestDistance,
 			TrackElevation: bestElevation,
 		})
