@@ -127,11 +127,12 @@ and other geographic features encountered along the route.`,
 			switch cmd.String("output") {
 			case "text":
 				w := tabwriter.NewWriter(cmd.Writer, 0, 0, 2, ' ', 0)
-				_, _ = fmt.Fprintf(w, "NAME\tTYPE\tLAT\tLON\tREAL ELEVATION\tTRACKED ELEVATION\tDISTANCE\n")
+				_, _ = fmt.Fprintf(w, "NUM\tNAME\tTYPE\tLAT\tLON\tREAL ELEVATION\tTRACKED ELEVATION\tDISTANCE\n")
 
 				for _, v := range visited {
 					_, _ = fmt.Fprintf(w,
-						"%s\t%s\t%0.5f\t%0.5f\t%.0fm\t%.0fm\t%.1fm\n",
+						"%3d\t%s\t%s\t%0.5f\t%0.5f\t%.0fm\t%.0fm\t%.1fm\n",
+						v.VisitedIndex,
 						v.Amenity.Name,
 						v.Amenity.Type,
 						v.Amenity.Lat,

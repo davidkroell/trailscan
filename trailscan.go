@@ -10,6 +10,7 @@ import (
 	"math"
 	"net/http"
 	"runtime"
+	"sort"
 	"strconv"
 	"strings"
 	"text/template"
@@ -43,6 +44,9 @@ type VisitedAmenity struct {
 	Amenity        Amenity
 	Distance       float64
 	TrackElevation float64
+	VisitedIndex   int
+
+	sortingNum int
 }
 
 type OverpassResponse struct {
@@ -225,13 +229,18 @@ func DefaultFindOptions() FindOptions {
 }
 
 func FindVisitedAmenities(candidates []Point, amenities []Amenity, op FindOptions) []VisitedAmenity {
-	var results []VisitedAmenity
+	type temp struct {
+		firstNum      int
+		bestDistance  float64
+		bestElevation float64
+		found         bool
+	}
 
-	for _, amenity := range amenities {
-		bestDistance := math.MaxFloat64
-		bestElevation := 0.0
+	state := make(map[int64]*temp) // Amenity ID -> tracking state
 
-		for _, p := range candidates {
+	for i, p := range candidates {
+		for _, amenity := range amenities {
+
 			d := haversine(
 				p.Lat,
 				p.Lon,
@@ -239,26 +248,56 @@ func FindVisitedAmenities(candidates []Point, amenities []Amenity, op FindOption
 				amenity.Lon,
 			)
 
-			if d < bestDistance {
-				bestDistance = d
-				bestElevation = p.Ele
+			s, ok := state[amenity.ID]
+			if !ok {
+				s = &temp{
+					bestDistance: math.MaxFloat64,
+				}
+				state[amenity.ID] = s
+			}
+
+			// update BEST distance anywhere on track
+			if d < s.bestDistance {
+				s.bestDistance = d
+				s.bestElevation = p.Ele
+			}
+
+			// first time we see it in track order
+			if !s.found &&
+				d <= op.MaxDistanceMeters &&
+				(amenity.Ele <= 0 || math.Abs(p.Ele-amenity.Ele) <= op.MaxElevationDifference) {
+
+				s.firstNum = i
+				s.found = true
 			}
 		}
+	}
 
-		if bestDistance > op.MaxDistanceMeters {
-			continue
-		}
+	// build results
+	results := make([]VisitedAmenity, 0, len(state))
 
-		if amenity.Ele > 0 &&
-			math.Abs(bestElevation-amenity.Ele) > op.MaxElevationDifference {
+	for _, amenity := range amenities {
+		s := state[amenity.ID]
+
+		// only include if ever matched
+		if !s.found {
 			continue
 		}
 
 		results = append(results, VisitedAmenity{
+			sortingNum:     s.firstNum,
 			Amenity:        amenity,
-			Distance:       bestDistance,
-			TrackElevation: bestElevation,
+			Distance:       s.bestDistance,
+			TrackElevation: s.bestElevation,
 		})
+	}
+
+	sort.Slice(results, func(i, j int) bool {
+		return results[i].sortingNum < results[j].sortingNum
+	})
+
+	for i := 0; i < len(results); i++ {
+		results[i].VisitedIndex = i + 1
 	}
 
 	return results
