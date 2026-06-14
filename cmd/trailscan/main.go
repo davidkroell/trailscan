@@ -67,7 +67,7 @@ and other geographic features encountered along the route.`,
 				Name:    "max-distance",
 				Aliases: []string{"md"},
 				Value:   50,
-				Usage:   "configure the maximum distance between tracked and actual",
+				Usage:   "configure the maximum distance (in meters) between tracked and actual",
 				Validator: func(v float64) error {
 					if v < 1 || v > 1000 {
 						return errors.New("maximum distance must be between 1 and 1000")
@@ -79,7 +79,7 @@ and other geographic features encountered along the route.`,
 				Name:    "max-elevation-diff",
 				Aliases: []string{"me"},
 				Value:   30,
-				Usage:   "configure the maximum elevation difference between tracked and actual",
+				Usage:   "configure the maximum elevation difference (in meters) between tracked and actual",
 				Validator: func(v float64) error {
 					if v < 1 || v > 1000 {
 						return errors.New("maximum elevation difference must be between 1 and 1000")
