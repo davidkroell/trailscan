@@ -1,4 +1,4 @@
-package main
+package trailscan
 
 import (
 	"encoding/json"
@@ -6,7 +6,6 @@ import (
 	"io"
 	"math"
 	"net/http"
-	"os"
 	"runtime"
 	"strconv"
 	"strings"
@@ -59,51 +58,8 @@ type OverpassResponse struct {
 	} `json:"elements"`
 }
 
-func main() {
-	if len(os.Args) != 2 {
-		fmt.Println("Usage:")
-		fmt.Println("  trailscan track.gpx")
-		os.Exit(1)
-	}
-
-	points, bbox, err := loadGPX(os.Args[1])
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Printf("Loaded %d track points\n", len(points))
-
-	peaks, err := fetchPeaks(bbox)
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Printf("Found %d peaks in bounding box\n", len(peaks))
-
-	visited := findVisitedPeaks(points, peaks)
-
-	fmt.Println("\nVisited Peaks")
-	fmt.Println("=============")
-
-	for _, v := range visited {
-		fmt.Printf(
-			"%s | peak=%.0fm | track=%.0fm | distance=%.1fm\n",
-			v.Peak.Name,
-			v.Peak.Ele,
-			v.TrackElevation,
-			v.Distance,
-		)
-	}
-}
-
-func loadGPX(filename string) ([]Point, BoundingBox, error) {
-	file, err := os.Open(filename)
-	if err != nil {
-		return nil, BoundingBox{}, err
-	}
-	defer file.Close()
-
-	gpxData, err := gpx.Parse(file)
+func LoadGPX(gpxReader io.Reader) ([]Point, BoundingBox, error) {
+	gpxData, err := gpx.Parse(gpxReader)
 	if err != nil {
 		return nil, BoundingBox{}, err
 	}
@@ -146,7 +102,7 @@ func loadGPX(filename string) ([]Point, BoundingBox, error) {
 	return points, bbox, nil
 }
 
-func fetchPeaks(bbox BoundingBox) ([]Peak, error) {
+func FetchPeaks(bbox BoundingBox) ([]Peak, error) {
 	query := fmt.Sprintf(`
 [out:json][timeout:10];
 node["natural"="peak"](%f,%f,%f,%f);
@@ -210,19 +166,14 @@ out body;`,
 	return peaks, nil
 }
 
-func findVisitedPeaks(
-	candidates []Point,
-	peaks []Peak,
-) []VisitedPeak {
+func FindVisitedPeaks(candidates []Point, peaks []Peak) []VisitedPeak {
 	var results []VisitedPeak
 
 	for _, peak := range peaks {
-
 		bestDistance := math.MaxFloat64
 		bestElevation := 0.0
 
 		for _, p := range candidates {
-
 			d := haversine(
 				p.Lat,
 				p.Lon,
@@ -241,8 +192,7 @@ func findVisitedPeaks(
 		}
 
 		if peak.Ele > 0 &&
-			math.Abs(bestElevation-peak.Ele) >
-				MaxElevationDifference {
+			math.Abs(bestElevation-peak.Ele) > MaxElevationDifference {
 			continue
 		}
 
