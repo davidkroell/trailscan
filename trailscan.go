@@ -151,6 +151,13 @@ const CyclingQueryTemplate = `
 );
 out body;`
 
+var AllTemplates = map[string]string{
+	"peaks":   PeaksQueryTemplate,
+	"hiking":  HikingQueryTemplate,
+	"village": VillagesQueryTemplate,
+	"cycling": CyclingQueryTemplate,
+}
+
 func DefaultFetchOptions() FetchOptions {
 	return FetchOptions{
 		QueryTemplate: PeaksQueryTemplate,

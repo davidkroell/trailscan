@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"os"
 	"slices"
+	"sort"
 	"text/tabwriter"
 
 	"github.com/davidkroell/trailscan"
@@ -14,6 +15,12 @@ import (
 )
 
 func main() {
+	supportedQueryTemplates := make([]string, 0, len(trailscan.AllTemplates))
+	for name := range trailscan.AllTemplates {
+		supportedQueryTemplates = append(supportedQueryTemplates, name)
+	}
+	sort.Strings(supportedQueryTemplates)
+
 	cmd := &cli.Command{
 		UsageText: "trailscan <track.gpx> [OPTIONS]",
 		Name:      "trailscan",
@@ -31,36 +38,42 @@ and other geographic features encountered along the route.`,
 		},
 		Flags: []cli.Flag{
 			&cli.StringFlag{
-				Name:    "overpass-endpoint",
+				Name:    "endpoint",
 				Aliases: []string{"e"},
 				Value:   "https://overpass-api.de/api/interpreter",
 				Usage:   "endpoint to use to send the overpass query",
 			},
 			&cli.StringFlag{
-				Name:  "overpass-query-type",
-				Value: "peaks",
-				Usage: "uses a predefined query, supported queries are [peaks, villages, hiking, cycling]",
+				Name:    "query-template",
+				Aliases: []string{"q"},
+				Value:   "peaks",
+				Usage:   fmt.Sprintf("use a predefined query, supported queries are %v, or a path to a valid query template file", supportedQueryTemplates),
 				Validator: func(s string) error {
-					supported := []string{"peaks", "villages", "hiking", "cycling"}
-					if slices.Contains(supported, s) {
+					if slices.Contains(supportedQueryTemplates, s) {
 						return nil
 					}
 
-					return errors.New("supported queries are [peaks, villages, hiking, cycling]")
+					f, err := os.Open(s)
+					if err == nil {
+						f.Close()
+						return nil
+					}
+
+					return fmt.Errorf("supported queries are %v, or a path to a valid query template file", supportedQueryTemplates)
 				},
 			},
 			&cli.StringFlag{
 				Name:    "output",
 				Aliases: []string{"o"},
 				Value:   "text",
-				Usage:   "output format to use, supported output formats are [text, json]",
+				Usage:   "output format to use, supported output formats are [text json]",
 				Validator: func(s string) error {
 					supported := []string{"text", "json"}
 					if slices.Contains(supported, s) {
 						return nil
 					}
 
-					return errors.New("supported output formats are [text, json]")
+					return errors.New("supported output formats are [text json]")
 				},
 			},
 			&cli.Float64Flag{
@@ -102,16 +115,18 @@ and other geographic features encountered along the route.`,
 			}
 
 			fetchOptions := trailscan.DefaultFetchOptions()
-			fetchOptions.Endpoint = cmd.String("overpass-endpoint")
-			switch cmd.String("overpass-query-type") {
-			case "peaks":
-				fetchOptions.QueryTemplate = trailscan.PeaksQueryTemplate
-			case "villages":
-				fetchOptions.QueryTemplate = trailscan.VillagesQueryTemplate
-			case "hiking":
-				fetchOptions.QueryTemplate = trailscan.HikingQueryTemplate
-			case "cycling":
-				fetchOptions.QueryTemplate = trailscan.CyclingQueryTemplate
+			fetchOptions.Endpoint = cmd.String("endpoint")
+			queryTemplate := cmd.String("query-template")
+
+			qt, ok := trailscan.AllTemplates[queryTemplate]
+			if ok {
+				fetchOptions.QueryTemplate = qt
+			} else {
+				b, err := os.ReadFile(queryTemplate)
+				if err != nil {
+					return fmt.Errorf("cannot read query template file: %w", err)
+				}
+				fetchOptions.QueryTemplate = string(b)
 			}
 
 			amenities, err := trailscan.FetchAmenities(ctx, bbox, fetchOptions)
@@ -128,7 +143,7 @@ and other geographic features encountered along the route.`,
 			switch cmd.String("output") {
 			case "text":
 				w := tabwriter.NewWriter(cmd.Writer, 0, 0, 2, ' ', 0)
-				_, _ = fmt.Fprintf(w, "NUM\tNAME\tTYPE\tLAT\tLON\tREAL ELEVATION\tTRACKED ELEVATION\tDISTANCE\n")
+				_, _ = fmt.Fprintf(w, "NUM\tNAME\tTYPE\tLAT\tLON\tELEVATION\tTRACKED ELEVATION\tDISTANCE\n")
 
 				for _, v := range visited {
 					_, _ = fmt.Fprintf(w,
@@ -149,6 +164,21 @@ and other geographic features encountered along the route.`,
 				_ = json.NewEncoder(cmd.Writer).Encode(visited)
 			}
 			return nil
+		},
+		Commands: []*cli.Command{
+			{
+				UsageText: "trailscan querytemplates",
+				Name:      "querytemplates",
+				Usage:     "Print all predefined querytemplates",
+				Action: func(ctx context.Context, cmd *cli.Command) error {
+
+					for _, name := range supportedQueryTemplates {
+						_, _ = fmt.Fprintf(cmd.Writer, "template: %s\n%s\n---\n", name, trailscan.AllTemplates[name])
+					}
+
+					return nil
+				},
+			},
 		},
 	}
 
