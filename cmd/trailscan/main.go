@@ -146,14 +146,26 @@ and other geographic features encountered along the route.`,
 				_, _ = fmt.Fprintf(w, "NUM\tNAME\tTYPE\tLAT\tLON\tELEVATION\tTRACKED ELEVATION\tDISTANCE\n")
 
 				for _, v := range visited {
+					var amType, name string
+					var ele float64
+					if v.Amenity.ParentWay != nil {
+						name = v.Amenity.ParentWay.Name
+						ele = v.Amenity.ParentWay.Ele
+						amType = v.Amenity.ParentWay.Type
+					} else {
+						name = v.Amenity.Name
+						ele = v.Amenity.Ele
+						amType = v.Amenity.Type
+					}
+
 					_, _ = fmt.Fprintf(w,
 						"%3d\t%s\t%s\t%0.5f\t%0.5f\t%.0fm\t%.0fm\t%.1fm\n",
 						v.VisitedIndex,
-						v.Amenity.Name,
-						v.Amenity.Type,
+						name,
+						amType,
 						v.Amenity.Lat,
 						v.Amenity.Lon,
-						v.Amenity.Ele,
+						ele,
 						v.TrackElevation,
 						v.Distance,
 					)

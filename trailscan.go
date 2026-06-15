@@ -32,16 +32,17 @@ type BoundingBox struct {
 }
 
 type Amenity struct {
-	ID   int64
-	Name string
-	Type string
-	Ele  float64
-	Lat  float64
-	Lon  float64
+	ID        int64
+	Name      string
+	Type      string
+	Ele       float64
+	Lat       float64
+	Lon       float64
+	ParentWay *Amenity
 }
 
 type VisitedAmenity struct {
-	Amenity        Amenity
+	Amenity        *Amenity
 	Distance       float64
 	TrackElevation float64
 	VisitedIndex   int
@@ -51,6 +52,10 @@ type VisitedAmenity struct {
 
 type OverpassResponse struct {
 	Elements []struct {
+		// for ways only
+		Type  string  `json:"type"`
+		Nodes []int64 `json:"nodes"`
+
 		ID   int64   `json:"id"`
 		Lat  float64 `json:"lat"`
 		Lon  float64 `json:"lon"`
@@ -116,33 +121,41 @@ type FetchOptions struct {
 }
 
 const PeaksQueryTemplate = `
-[out:json][timeout:15];
+[out:json][timeout:20];
 node["natural"="peak"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
 out body;`
 
 const HikingQueryTemplate = `
-[out:json][timeout:15];
+[out:json][timeout:25];
 (
-  node["natural"~"peak|saddle|water"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  node["natural"="lake"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["natural"~"peak|saddle|water|lake"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  way["natural"="water"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
 
-  node["tourism"="alpine_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  node["tourism"="wilderness_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["tourism"~"alpine_hut|wilderness_hut|mountain_hut|viewpoint"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  way["tourism"~"alpine_hut|wilderness_hut|mountain_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  relation["tourism"~"alpine_hut|wilderness_hut|mountain_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  
   node["amenity"="shelter"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-
-  node["tourism"="viewpoint"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  way["amenity"="shelter"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  relation["amenity"="shelter"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  
+  node["building"="hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  way["building"="hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
 );
-out body;`
+out body;
+>;
+out skel qt;
+`
 
 const VillagesQueryTemplate = `
-[out:json][timeout:15];
+[out:json][timeout:20];
 
 node[place~"city|town|village"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
 
 out body;`
 
 const CyclingQueryTemplate = `
-[out:json][timeout:15];
+[out:json][timeout:20];
 (
   node[place~"city|town|village"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
   node["natural"="saddle"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
@@ -165,7 +178,7 @@ func DefaultFetchOptions() FetchOptions {
 	}
 }
 
-func FetchAmenities(ctx context.Context, bbox BoundingBox, op FetchOptions) ([]Amenity, error) {
+func FetchAmenities(ctx context.Context, bbox BoundingBox, op FetchOptions) ([]*Amenity, error) {
 	queryBuf := new(bytes.Buffer)
 	err := template.Must(template.New("query").Parse(op.QueryTemplate)).ExecuteTemplate(queryBuf, "query", bbox)
 	if err != nil {
@@ -204,7 +217,9 @@ func FetchAmenities(ctx context.Context, bbox BoundingBox, op FetchOptions) ([]A
 		return nil, err
 	}
 
-	amenities := make([]Amenity, 0, len(result.Elements))
+	amenities := make([]*Amenity, 0, len(result.Elements))
+
+	seenIDs := make(map[int64]struct{}, len(result.Elements))
 
 	for _, e := range result.Elements {
 		var ele float64
@@ -212,14 +227,40 @@ func FetchAmenities(ctx context.Context, bbox BoundingBox, op FetchOptions) ([]A
 			ele, _ = strconv.ParseFloat(e.Tags.Ele, 64)
 		}
 
-		amenities = append(amenities, Amenity{
+		if _, ok := seenIDs[e.ID]; ok {
+			// do not double-register nodes which are part of ways
+			continue
+		}
+
+		amenity := Amenity{
 			ID:   e.ID,
 			Type: cmp.Or(e.Tags.Natural, e.Tags.Place, e.Tags.Tourism),
 			Name: e.Tags.Name,
 			Ele:  ele,
 			Lat:  e.Lat,
 			Lon:  e.Lon,
-		})
+		}
+		amenities = append(amenities, &amenity)
+		seenIDs[amenity.ID] = struct{}{}
+
+		if e.Type == "way" {
+			for _, nodeID := range e.Nodes {
+
+				for _, embedded := range result.Elements {
+					if nodeID == embedded.ID {
+						amenities = append(amenities, &Amenity{
+							ID:        nodeID,
+							Lat:       embedded.Lat,
+							Lon:       embedded.Lon,
+							ParentWay: &amenity,
+						})
+						seenIDs[nodeID] = struct{}{}
+						break // speedup
+					}
+				}
+
+			}
+		}
 	}
 
 	return amenities, nil
@@ -237,7 +278,7 @@ func DefaultFindOptions() FindOptions {
 	}
 }
 
-func FindVisitedAmenities(candidates []Point, amenities []Amenity, op FindOptions) []VisitedAmenity {
+func FindVisitedAmenities(candidates []Point, amenities []*Amenity, op FindOptions) []VisitedAmenity {
 	type temp struct {
 		firstNum      int
 		bestDistance  float64
@@ -280,12 +321,23 @@ func FindVisitedAmenities(candidates []Point, amenities []Amenity, op FindOption
 	// build results
 	results := make([]VisitedAmenity, 0, len(state))
 
+outer:
 	for _, amenity := range amenities {
 		s := state[amenity.ID]
 
 		// only include if ever matched
 		if !s.found {
 			continue
+		}
+
+		if amenity.ParentWay != nil {
+			// check if an amenity with the same parent way is already stored
+			for _, alreadyResult := range results {
+				if alreadyResult.Amenity.ParentWay != nil && amenity.ParentWay.ID == alreadyResult.Amenity.ParentWay.ID {
+					// found -> skip this
+					continue outer
+				}
+			}
 		}
 
 		results = append(results, VisitedAmenity{
