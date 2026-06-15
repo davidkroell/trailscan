@@ -95,7 +95,8 @@ and other geographic features encountered along the route.`,
 			}
 			defer file.Close()
 
-			points, bbox, err := trailscan.LoadGPX(file)
+			maxDistanceFlag := cmd.Float64("max-distance")
+			points, bbox, err := trailscan.LoadGPX(file, maxDistanceFlag/4)
 			if err != nil {
 				return fmt.Errorf("cannot load gpx file: %w", err)
 			}
@@ -119,7 +120,7 @@ and other geographic features encountered along the route.`,
 			}
 
 			findOpts := trailscan.DefaultFindOptions()
-			findOpts.MaxDistanceMeters = cmd.Float64("max-distance")
+			findOpts.MaxDistanceMeters = maxDistanceFlag
 			findOpts.MaxElevationDifference = cmd.Float64("max-elevation-diff")
 
 			visited := trailscan.FindVisitedAmenities(points, amenities, findOpts)

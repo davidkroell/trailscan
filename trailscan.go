@@ -64,13 +64,15 @@ type OverpassResponse struct {
 	} `json:"elements"`
 }
 
-func LoadGPX(gpxReader io.Reader) ([]Point, BoundingBox, error) {
+func LoadGPX(gpxReader io.Reader, simplifyDistance float64) ([]Point, BoundingBox, error) {
 	gpxData, err := gpx.Parse(gpxReader)
 	if err != nil {
 		return nil, BoundingBox{}, err
 	}
 
-	points := make([]Point, 0, 2000) // a typical gpx file has at least a few hundred or a thousand points
+	gpxData.SimplifyTracks(simplifyDistance) // reduces the number of points by factor 2 to 10
+
+	points := make([]Point, 0, 1000) // a typical gpx file has at least a few hundred points
 
 	bbox := BoundingBox{
 		MinLat: math.MaxFloat64,
