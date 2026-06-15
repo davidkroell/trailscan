@@ -241,12 +241,7 @@ func FindVisitedAmenities(candidates []Point, amenities []Amenity, op FindOption
 	for i, p := range candidates {
 		for _, amenity := range amenities {
 
-			d := haversine(
-				p.Lat,
-				p.Lon,
-				amenity.Lat,
-				amenity.Lon,
-			)
+			d := gpx.HaversineDistance(p.Lat, p.Lon, amenity.Lat, amenity.Lon)
 
 			s, ok := state[amenity.ID]
 			if !ok {
@@ -301,31 +296,4 @@ func FindVisitedAmenities(candidates []Point, amenities []Amenity, op FindOption
 	}
 
 	return results
-}
-
-func haversine(
-	lat1, lon1,
-	lat2, lon2 float64,
-) float64 {
-	const earthRadius = 6371000.0
-
-	dLat := radians(lat2 - lat1)
-	dLon := radians(lon2 - lon1)
-
-	a :=
-		math.Sin(dLat/2)*math.Sin(dLat/2) +
-			math.Cos(radians(lat1))*
-				math.Cos(radians(lat2))*
-				math.Sin(dLon/2)*math.Sin(dLon/2)
-
-	c := 2 * math.Atan2(
-		math.Sqrt(a),
-		math.Sqrt(1-a),
-	)
-
-	return earthRadius * c
-}
-
-func radians(v float64) float64 {
-	return v * math.Pi / 180
 }
