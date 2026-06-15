@@ -1,0 +1,2929 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-15T15:00:00Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+    {
+      "type": "node",
+      "id": 29868275,
+      "lat": 47.0385366,
+      "lon": 12.8408209,
+      "tags": {
+        "alt_name": "Heiligenblut am Großglockner",
+        "name": "Heiligenblut",
+        "name:ru": "Хайлигенблут",
+        "note": "in fact, there is no village called Heiligenblut - the central hamlet of the municipality of Heiligenblut is called \"Hof\"",
+        "place": "village",
+        "population": "948",
+        "population:date": "2024-01-01",
+        "source:population": "wikipedia",
+        "website": "https://heiligenblut.at/",
+        "wikidata": "Q875812",
+        "wikimedia_commons": "Category:Heiligenblut",
+        "wikipedia": "de:Heiligenblut am Großglockner"
+      }
+    },
+    {
+      "type": "node",
+      "id": 31238390,
+      "lat": 46.7506053,
+      "lon": 13.1804131,
+      "tags": {
+        "name": "Greifenburg",
+        "place": "town",
+        "population": "1005",
+        "population:date": "2024-01-01",
+        "source:population": "wikipedia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 31238397,
+      "lat": 46.7474740,
+      "lon": 13.1362684,
+      "tags": {
+        "name": "Berg",
+        "place": "village",
+        "population": "76"
+      }
+    },
+    {
+      "type": "node",
+      "id": 31238742,
+      "lat": 46.9351835,
+      "lon": 13.1298627,
+      "tags": {
+        "name": "Flattach",
+        "place": "village",
+        "population": "429"
+      }
+    },
+    {
+      "type": "node",
+      "id": 31238803,
+      "lat": 46.8374364,
+      "lon": 12.8418044,
+      "tags": {
+        "created_by": "opengeodb2osm0.5.2",
+        "name": "Iselsberg",
+        "place": "village",
+        "population": "409"
+      }
+    },
+    {
+      "type": "node",
+      "id": 60804467,
+      "lat": 47.0907577,
+      "lon": 13.1184706,
+      "tags": {
+        "name": "Böckstein",
+        "place": "village",
+        "population": "2765",
+        "wikidata": "Q973185",
+        "wikipedia": "de:Böckstein"
+      }
+    },
+    {
+      "type": "node",
+      "id": 207448176,
+      "lat": 46.7970506,
+      "lon": 12.8412952,
+      "tags": {
+        "created_by": "opengeodb2osm0.5.2",
+        "name": "Lavant",
+        "place": "village",
+        "population": "271"
+      }
+    },
+    {
+      "type": "node",
+      "id": 207448874,
+      "lat": 46.8257242,
+      "lon": 12.8410010,
+      "tags": {
+        "name": "Dölsach",
+        "name:ru": "Дёльзах",
+        "place": "village",
+        "population": "1055",
+        "postal_code": "9991",
+        "ref:at:gkz": "7070701",
+        "ref:at:okz": "16781"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240027241,
+      "lat": 46.8341740,
+      "lon": 12.8329781,
+      "tags": {
+        "name": "Göriach",
+        "place": "village",
+        "population": "221",
+        "postal_code": "9991",
+        "ref:at:gkz": "7070703",
+        "ref:at:okz": "16783",
+        "wikidata": "Q125826185"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240027761,
+      "lat": 46.8423478,
+      "lon": 12.8086002,
+      "tags": {
+        "alt_name": "Obernußdorf",
+        "name": "Nußdorfer Berg",
+        "place": "village",
+        "population": "114",
+        "postal_code": "9990",
+        "ref:at:gkz": "7071904",
+        "ref:at:okz": "16848"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240028222,
+      "lat": 46.9100796,
+      "lon": 13.2666055,
+      "tags": {
+        "name": "Zwenberg",
+        "place": "village",
+        "population": "59"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240033641,
+      "lat": 46.7403606,
+      "lon": 13.0809766,
+      "tags": {
+        "name": "Dellach",
+        "place": "village"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240034185,
+      "lat": 46.7430444,
+      "lon": 12.9600141,
+      "tags": {
+        "name": "Ötting",
+        "place": "village",
+        "population": "274"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240034281,
+      "lat": 46.8751144,
+      "lon": 13.3076593,
+      "tags": {
+        "name": "Unterkolbnitz",
+        "place": "village"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240038431,
+      "lat": 46.9731011,
+      "lon": 12.8952115,
+      "tags": {
+        "admin_level": "10",
+        "name": "Großkirchheim-Döllach",
+        "place": "village",
+        "population": "448",
+        "population:date": "2025-01-01",
+        "source:population": "wikipedia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240040329,
+      "lat": 46.8146918,
+      "lon": 12.8527392,
+      "tags": {
+        "name": "Görtschach",
+        "place": "village",
+        "population": "237"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240041839,
+      "lat": 46.9352061,
+      "lon": 13.1998444,
+      "tags": {
+        "name": "Dürnvellach",
+        "place": "village",
+        "population": "202"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240042987,
+      "lat": 46.9605765,
+      "lon": 12.9039890,
+      "tags": {
+        "name": "Sagritz",
+        "place": "village",
+        "population": "173",
+        "population:date": "2024-01-01",
+        "population:source": "wikipedia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240044546,
+      "lat": 46.7395593,
+      "lon": 13.1944672,
+      "tags": {
+        "name": "Bruggen",
+        "place": "village",
+        "population": "75"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240047096,
+      "lat": 46.9378851,
+      "lon": 13.1899194,
+      "tags": {
+        "name": "Räuflach",
+        "place": "village",
+        "population": "293"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240049058,
+      "lat": 46.8704513,
+      "lon": 12.8776815,
+      "tags": {
+        "name": "Winklern",
+        "place": "village",
+        "population": "705",
+        "population:date": "2024-01-01",
+        "source:population": "wikipedia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240049833,
+      "lat": 46.7336735,
+      "lon": 13.1177012,
+      "tags": {
+        "name": "Feistritz",
+        "place": "village",
+        "population": "150"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240050946,
+      "lat": 46.7557323,
+      "lon": 13.0245296,
+      "tags": {
+        "name": "Irschen",
+        "place": "village",
+        "population": "430"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240053012,
+      "lat": 46.9375195,
+      "lon": 13.1639296,
+      "tags": {
+        "name": "Söbriach",
+        "place": "village",
+        "population": "167"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240053831,
+      "lat": 46.8308312,
+      "lon": 12.8266471,
+      "tags": {
+        "name": "Stribach",
+        "place": "village",
+        "population": "296"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240054174,
+      "lat": 46.8866446,
+      "lon": 13.0343034,
+      "tags": {
+        "name": "Stall",
+        "place": "village",
+        "population": "618"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240054547,
+      "lat": 46.9007404,
+      "lon": 13.2622348,
+      "tags": {
+        "name": "Penk",
+        "place": "village",
+        "population": "316"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240054746,
+      "lat": 46.8803000,
+      "lon": 13.0152778,
+      "tags": {
+        "name": "Latzendorf",
+        "place": "village",
+        "population": "198"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240056068,
+      "lat": 46.7560905,
+      "lon": 13.0145197,
+      "tags": {
+        "name": "Stresweg",
+        "place": "village",
+        "population": "125"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240056979,
+      "lat": 46.7419883,
+      "lon": 13.0745695,
+      "tags": {
+        "name": "Nörenach",
+        "place": "village",
+        "population": "167"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240059913,
+      "lat": 46.9369062,
+      "lon": 13.0809729,
+      "tags": {
+        "name": "Grafenberg",
+        "place": "village",
+        "population": "50"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240061040,
+      "lat": 46.8876526,
+      "lon": 13.2948660,
+      "tags": {
+        "name": "Preisdorf",
+        "place": "village",
+        "population": "92"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240066989,
+      "lat": 46.7869681,
+      "lon": 12.9089785,
+      "tags": {
+        "name": "Nikolsdorf",
+        "place": "village",
+        "population": "568",
+        "postal_code": "9782",
+        "ref:at:gkz": "7071805",
+        "ref:at:okz": "16842"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240067147,
+      "lat": 46.8860768,
+      "lon": 13.2663534,
+      "tags": {
+        "name": "Napplach",
+        "place": "village",
+        "population": "262"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240070589,
+      "lat": 46.7511190,
+      "lon": 12.9949845,
+      "tags": {
+        "name": "Simmerlach",
+        "place": "village"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240071030,
+      "lat": 46.9216153,
+      "lon": 12.9130906,
+      "tags": {
+        "name": "Mörtschach",
+        "place": "village",
+        "population": "247"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240071919,
+      "lat": 46.8289811,
+      "lon": 12.8110673,
+      "tags": {
+        "ele": "674",
+        "name": "Debant",
+        "place": "village",
+        "population": "2250",
+        "postal_code": "9990",
+        "ref:at:gkz": "7071901",
+        "ref:at:okz": "16845"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240073752,
+      "lat": 46.8800468,
+      "lon": 13.3015687,
+      "tags": {
+        "name": "Oberkolbnitz",
+        "place": "village"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240074062,
+      "lat": 46.9618273,
+      "lon": 13.0571772,
+      "tags": {
+        "name": "Innerfragant",
+        "place": "village",
+        "population": "74"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240082800,
+      "lat": 46.9328250,
+      "lon": 13.2019817,
+      "tags": {
+        "name": "Obervellach",
+        "place": "town",
+        "population": "243",
+        "postal_code": "9821"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240083139,
+      "lat": 46.7452030,
+      "lon": 13.0760079,
+      "tags": {
+        "name": "Glatschach",
+        "place": "village",
+        "population": "131"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240087872,
+      "lat": 46.7483693,
+      "lon": 12.9701278,
+      "tags": {
+        "name": "Oberdrauburg",
+        "place": "village",
+        "population": "1311"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240090847,
+      "lat": 46.7417994,
+      "lon": 13.0306632,
+      "tags": {
+        "name": "Gröfelhof",
+        "place": "village",
+        "population": "263"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240096146,
+      "lat": 46.7481916,
+      "lon": 13.0314865,
+      "tags": {
+        "name": "Rittersdorf",
+        "place": "village",
+        "population": "183"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240096773,
+      "lat": 46.9658192,
+      "lon": 12.9034344,
+      "tags": {
+        "name": "Mitteldorf",
+        "place": "village",
+        "population": "109"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240098871,
+      "lat": 46.9250361,
+      "lon": 13.2259938,
+      "tags": {
+        "name": "Stallhofen",
+        "place": "village",
+        "population": "218"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240099953,
+      "lat": 46.9886869,
+      "lon": 13.1706177,
+      "tags": {
+        "license_plate_code": "SP",
+        "name": "Mallnitz",
+        "place": "village",
+        "population": "528",
+        "postal_code": "9822",
+        "ref:at:gkz": "2061802",
+        "telephone_area_code": "04784",
+        "website": "https://www.mallnitz.gv.at/",
+        "wikidata": "Q692892",
+        "wikipedia": "de:Mallnitz"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240099960,
+      "lat": 46.9396224,
+      "lon": 13.1283101,
+      "tags": {
+        "name": "Flattachberg",
+        "place": "village",
+        "population": "118"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240103753,
+      "lat": 46.7974924,
+      "lon": 12.8889290,
+      "tags": {
+        "name": "Lengberg",
+        "place": "village",
+        "population": "113",
+        "postal_code": "9782",
+        "ref:at:gkz": "7071802",
+        "ref:at:okz": "16839"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240104002,
+      "lat": 46.7436770,
+      "lon": 13.0905597,
+      "tags": {
+        "name": "Schmelz",
+        "place": "village",
+        "population": "237"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240106506,
+      "lat": 46.9631888,
+      "lon": 13.1816780,
+      "tags": {
+        "name": "Lassach Sonnseite",
+        "place": "village",
+        "population": "48"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240107531,
+      "lat": 46.8297184,
+      "lon": 12.8560974,
+      "tags": {
+        "name": "Stronach",
+        "place": "village",
+        "population": "161"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240108728,
+      "lat": 46.7179468,
+      "lon": 13.2902353,
+      "tags": {
+        "name": "Techendorf",
+        "place": "village",
+        "population": "174"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240109124,
+      "lat": 46.9903599,
+      "lon": 13.1721351,
+      "tags": {
+        "name": "Stappitz",
+        "place": "village",
+        "population": "431",
+        "postal_code": "9822"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240113025,
+      "lat": 46.8699781,
+      "lon": 13.2320794,
+      "tags": {
+        "name": "Teuchl",
+        "place": "village",
+        "population": "106"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240113279,
+      "lat": 46.7574699,
+      "lon": 12.9266947,
+      "tags": {
+        "name": "Unterpirkach",
+        "place": "village",
+        "population": "69"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240117255,
+      "lat": 46.8785600,
+      "lon": 13.3155850,
+      "tags": {
+        "name": "Zandlach",
+        "place": "village"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240118988,
+      "lat": 46.8167000,
+      "lon": 12.8500000,
+      "tags": {
+        "created_by": "opengeodb2osm0.5.2",
+        "name": "Gödnach",
+        "place": "village",
+        "population": "380"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240119915,
+      "lat": 46.9641167,
+      "lon": 13.1873496,
+      "tags": {
+        "name": "Lassach Schattseite",
+        "place": "village",
+        "population": "41"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240120884,
+      "lat": 46.8625225,
+      "lon": 12.9643518,
+      "tags": {
+        "name": "Rangersdorf",
+        "place": "village",
+        "population": "392",
+        "population:date": "2024-01-01",
+        "source:population": "wikipedia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 240126368,
+      "lat": 46.9398483,
+      "lon": 13.1738161,
+      "tags": {
+        "name": "Semslach",
+        "place": "village",
+        "population": "241"
+      }
+    },
+    {
+      "type": "node",
+      "id": 282332278,
+      "lat": 47.0823314,
+      "lon": 12.8420345,
+      "tags": {
+        "ele": "2576",
+        "name": "Hochtor",
+        "name:ru": "Хохтор",
+        "natural": "saddle",
+        "wikidata": "Q21871884",
+        "wikipedia": "de:Hochtor (Pass)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287405182,
+      "lat": 47.1094857,
+      "lon": 13.0987342,
+      "tags": {
+        "name": "Aussichtsplattform Glocknerblick",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 309699845,
+      "lat": 46.7826208,
+      "lon": 13.1172925,
+      "tags": {
+        "ele": "2070",
+        "mountain_pass": "yes",
+        "name": "Ochsentörl",
+        "natural": "saddle",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 382966970,
+      "lat": 47.0870957,
+      "lon": 13.3017519,
+      "tags": {
+        "ele": "2272",
+        "name": "Kolmscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 382978330,
+      "lat": 47.0540959,
+      "lon": 12.9574308,
+      "tags": {
+        "ele": "3106",
+        "name": "Hoher Sonnblick",
+        "name:ru": "Зоннблик",
+        "natural": "peak",
+        "old_name": "Vorderer Sonnblick",
+        "source:old_name": "FLA (Sbg)",
+        "tourism": "viewpoint",
+        "wikidata": "Q877393",
+        "wikipedia": "de:Hoher Sonnblick"
+      }
+    },
+    {
+      "type": "node",
+      "id": 382980311,
+      "lat": 47.0857991,
+      "lon": 12.8726000,
+      "tags": {
+        "ele": "2645",
+        "mountain_pass": "yes",
+        "name": "Weißenbachscharte",
+        "name:ru": "Вайсенбахшарте",
+        "natural": "saddle",
+        "source": "basemap.at",
+        "westra_ref": "11828",
+        "wikidata": "Q21863914"
+      }
+    },
+    {
+      "type": "node",
+      "id": 459814537,
+      "lat": 46.7319164,
+      "lon": 13.2687716,
+      "tags": {
+        "name": "Weiße Wand",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 459814542,
+      "lat": 46.7314014,
+      "lon": 13.2687757,
+      "tags": {
+        "name": "Weiße Wand",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 489899746,
+      "lat": 46.9860959,
+      "lon": 12.9754218,
+      "tags": {
+        "ele": "2724",
+        "mountain_pass": "yes",
+        "name": "Butzentörl",
+        "natural": "saddle",
+        "source": "basemap"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620831626,
+      "lat": 46.7574965,
+      "lon": 13.2476697,
+      "tags": {
+        "name": "Steinfeld",
+        "place": "village",
+        "population": "1307",
+        "population:date": "2024-01-01",
+        "source:population": "wikipedia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 767331501,
+      "lat": 46.8309901,
+      "lon": 13.1735011,
+      "tags": {
+        "ele": "2330",
+        "mountain_pass": "yes",
+        "name": "Naßfeldtörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 767331695,
+      "lat": 46.8140423,
+      "lon": 13.1938232,
+      "tags": {
+        "ele": "2190",
+        "mountain_pass": "yes",
+        "name": "Schanitzentörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 767332039,
+      "lat": 46.7917940,
+      "lon": 13.2035097,
+      "tags": {
+        "ele": "2070",
+        "mountain_pass": "yes",
+        "name": "Gnoppnitztörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 777965689,
+      "lat": 46.7899850,
+      "lon": 13.1324687,
+      "tags": {
+        "ele": "2310",
+        "mountain_pass": "yes",
+        "name": "Rottörl",
+        "natural": "saddle",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 777965995,
+      "lat": 46.7957318,
+      "lon": 13.1390923,
+      "tags": {
+        "ele": "2401",
+        "mountain_pass": "yes",
+        "name": "Sensentörl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 777966462,
+      "lat": 46.7858145,
+      "lon": 13.1401480,
+      "tags": {
+        "ele": "2170",
+        "mountain_pass": "yes",
+        "name": "Naßfeldtörl",
+        "natural": "saddle",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 797829762,
+      "lat": 46.7509921,
+      "lon": 12.8440408,
+      "tags": {
+        "ele": "2347",
+        "name": "Baumgartentörl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 837581108,
+      "lat": 46.9709557,
+      "lon": 12.9526906,
+      "tags": {
+        "ele": "2458",
+        "mountain_pass": "yes",
+        "name": "Göritzer Törl",
+        "natural": "saddle",
+        "source": "basemap"
+      }
+    },
+    {
+      "type": "node",
+      "id": 844496564,
+      "lat": 46.9748792,
+      "lon": 12.9578779,
+      "tags": {
+        "ele": "2517",
+        "mountain_pass": "yes",
+        "name": "Kluidtörl",
+        "natural": "saddle",
+        "source": "basemap"
+      }
+    },
+    {
+      "type": "node",
+      "id": 844547316,
+      "lat": 47.1083450,
+      "lon": 12.8344464,
+      "tags": {
+        "name": "Tauernfenster",
+        "name:en": "Tauern Window (Geology)",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 892698918,
+      "lat": 47.0110611,
+      "lon": 12.8646824,
+      "tags": {
+        "name": "Jungfernsprung",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 988274935,
+      "lat": 47.0615664,
+      "lon": 13.0112223,
+      "tags": {
+        "ele": "2471",
+        "mountain_pass": "yes",
+        "name": "Riffelscharte",
+        "name:ru": "Риффельшарте",
+        "natural": "saddle",
+        "rtsa_scale": "н/к",
+        "westra_ref": "12194",
+        "wikidata": "Q21865148"
+      }
+    },
+    {
+      "type": "node",
+      "id": 995180556,
+      "lat": 47.0560819,
+      "lon": 12.9501522,
+      "tags": {
+        "ele": "2905",
+        "mountain_pass": "yes",
+        "name": "Pilatusscharte",
+        "name:ru": "Пилатуашарте",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 995180585,
+      "lat": 47.0247387,
+      "lon": 12.9376320,
+      "tags": {
+        "ele": "2552",
+        "name": "Brettscharte",
+        "name:ru": "Бретт-Шарте",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 995180826,
+      "lat": 47.0376887,
+      "lon": 12.9912447,
+      "tags": {
+        "ele": "2696",
+        "mountain_pass": "yes",
+        "name": "Niedere Scharte",
+        "name:ru": "Нидере-Шарте",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 995846410,
+      "lat": 46.9349307,
+      "lon": 13.1133589,
+      "tags": {
+        "name": "Kleindorf",
+        "place": "village"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1042781988,
+      "lat": 46.9348210,
+      "lon": 13.1063176,
+      "tags": {
+        "name": "Außerfragant",
+        "place": "village",
+        "population": "301",
+        "postal_code": "9831"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1110160030,
+      "lat": 47.0808757,
+      "lon": 13.0261642,
+      "tags": {
+        "ele": "2226",
+        "mountain_pass": "yes",
+        "name": "Bockhartscharte",
+        "name:ru": "Бомкхартшарте",
+        "natural": "saddle",
+        "rtsa_scale": "н/к",
+        "westra_ref": "10913"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1311792321,
+      "lat": 46.7085585,
+      "lon": 13.2550516,
+      "tags": {
+        "ele": "1074",
+        "mountain_pass": "yes",
+        "name": "Kreuzbergsattel",
+        "natural": "saddle",
+        "wikidata": "Q875150",
+        "wikimedia_commons": "Category:Kreuzbergsattel",
+        "wikipedia": "de:Kreuzbergsattel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1383534019,
+      "lat": 46.8022626,
+      "lon": 12.9694142,
+      "tags": {
+        "ele": "2270",
+        "mountain_pass": "yes",
+        "name": "Wildseetörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1404540467,
+      "lat": 47.0271510,
+      "lon": 13.0887117,
+      "tags": {
+        "direction": "NW",
+        "ele": "2414",
+        "name": "Niederer Tauern",
+        "natural": "saddle",
+        "wikidata": "Q21866249",
+        "wikipedia": "de:Niederer Tauern"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1404563929,
+      "lat": 47.0412494,
+      "lon": 13.0009388,
+      "tags": {
+        "ele": "2754",
+        "mountain_pass": "yes",
+        "name": "Fraganter Scharte",
+        "name:ru": "Фрагантер-Шарте",
+        "natural": "saddle",
+        "westra_ref": "11831"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1412625768,
+      "lat": 47.0419026,
+      "lon": 13.1788534,
+      "tags": {
+        "ele": "2459",
+        "mountain_pass": "yes",
+        "name": "Korntauern",
+        "natural": "saddle",
+        "wikidata": "Q21868040",
+        "wikipedia": "de:Korntauern"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1475861513,
+      "lat": 46.8366445,
+      "lon": 13.2221644,
+      "tags": {
+        "ele": "2450",
+        "mountain_pass": "yes",
+        "name": "Goldgrubenscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1476016001,
+      "lat": 46.7566832,
+      "lon": 13.0981863,
+      "tags": {
+        "name": "Weinberg",
+        "place": "village",
+        "population": "86"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1479501129,
+      "lat": 46.8115082,
+      "lon": 12.9330916,
+      "tags": {
+        "ele": "2370",
+        "mountain_pass": "yes",
+        "name": "Michelsberger Törl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1479501336,
+      "lat": 46.8339206,
+      "lon": 13.1095393,
+      "tags": {
+        "ele": "2450",
+        "mountain_pass": "yes",
+        "name": "Glenktörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1479501431,
+      "lat": 46.8023951,
+      "lon": 12.9512180,
+      "tags": {
+        "ele": "2310",
+        "mountain_pass": "yes",
+        "name": "Damertörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1479501548,
+      "lat": 46.8105609,
+      "lon": 12.9995621,
+      "tags": {
+        "ele": "2460",
+        "mountain_pass": "yes",
+        "name": "Ochsenalmtörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1479501720,
+      "lat": 46.8145957,
+      "lon": 13.0069543,
+      "tags": {
+        "ele": "2390",
+        "mountain_pass": "yes",
+        "name": "Klingentörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1479501834,
+      "lat": 46.8164129,
+      "lon": 12.9215260,
+      "tags": {
+        "ele": "2290",
+        "mountain_pass": "yes",
+        "name": "Lindsberger Törl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1479502004,
+      "lat": 46.8092685,
+      "lon": 12.9955710,
+      "tags": {
+        "ele": "2380",
+        "mountain_pass": "yes",
+        "name": "Sandfeldtörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1488987050,
+      "lat": 46.7885569,
+      "lon": 13.2940069,
+      "tags": {
+        "ele": "2052",
+        "name": "Törl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1629863654,
+      "lat": 46.9860691,
+      "lon": 13.2929842,
+      "tags": {
+        "ele": "2672",
+        "mountain_pass": "yes",
+        "name": "Mallnitzer Scharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1699843117,
+      "lat": 46.9485264,
+      "lon": 12.9889403,
+      "tags": {
+        "ele": "2484",
+        "mountain_pass": "yes",
+        "name": "Sadnigscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1704760518,
+      "lat": 47.0852428,
+      "lon": 13.0643045,
+      "tags": {
+        "ele": "2237",
+        "mountain_pass": "yes",
+        "name": "Miesbichlscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1746963456,
+      "lat": 46.8252379,
+      "lon": 12.8179518,
+      "tags": {
+        "name": "Stribach-Süd",
+        "place": "village"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1769981093,
+      "lat": 46.7972723,
+      "lon": 12.8326690,
+      "tags": {
+        "name": "Dorfblick/Lavant",
+        "tourism": "viewpoint",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1797617356,
+      "lat": 47.1123812,
+      "lon": 13.2348317,
+      "tags": {
+        "ele": "2196",
+        "name": "Bärenscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1798823909,
+      "lat": 47.0898991,
+      "lon": 13.1747593,
+      "tags": {
+        "ele": "2321",
+        "mountain_pass": "yes",
+        "name": "Palfner Scharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1799964465,
+      "lat": 47.0784183,
+      "lon": 13.1829786,
+      "tags": {
+        "ele": "2314",
+        "name": "Untere Lainkarscharte",
+        "natural": "saddle",
+        "source:ele": "Laserscan",
+        "source:name": "basemap"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1827917302,
+      "lat": 47.1323535,
+      "lon": 12.9161719,
+      "tags": {
+        "ele": "2634",
+        "name": "Tiefe Scharte",
+        "natural": "saddle",
+        "source": "geoimage.at hires"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1851240070,
+      "lat": 46.7505454,
+      "lon": 12.9361357,
+      "tags": {
+        "name": "Flaschberg",
+        "place": "village",
+        "population": "52"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1865606836,
+      "lat": 46.8012131,
+      "lon": 13.1421980,
+      "tags": {
+        "ele": "2370",
+        "mountain_pass": "yes",
+        "name": "Zweiseentörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1919990236,
+      "lat": 47.1160280,
+      "lon": 12.8236211,
+      "tags": {
+        "name": "Blick zum Fuscher Törl",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1927537580,
+      "lat": 46.9683755,
+      "lon": 13.3095533,
+      "tags": {
+        "ele": "2690",
+        "mountain_pass": "yes",
+        "name": "Kaponigtörl",
+        "natural": "saddle",
+        "wikidata": "Q21868278"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2053572158,
+      "lat": 47.1145001,
+      "lon": 13.1352414,
+      "tags": {
+        "name": "Bad Gastein",
+        "name:hu": "Bad Gastein",
+        "name:ru": "Бадгастайн",
+        "place": "village",
+        "population": "3894"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2074778625,
+      "lat": 47.1142186,
+      "lon": 13.1363842,
+      "tags": {
+        "name": "Wasserfall",
+        "tourism": "viewpoint",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2085038303,
+      "lat": 47.0432780,
+      "lon": 13.2577710,
+      "tags": {
+        "ele": "2675",
+        "mountain_pass": "yes",
+        "name": "Großelendscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2085587131,
+      "lat": 47.0931398,
+      "lon": 13.2716833,
+      "tags": {
+        "ele": "2660",
+        "mountain_pass": "yes",
+        "name": "Kleinelendscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "wikidata": "Q21868456"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2189835839,
+      "lat": 47.0373414,
+      "lon": 13.1955785,
+      "tags": {
+        "ele": "2379",
+        "name": "Lucketörl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2197030966,
+      "lat": 47.0580360,
+      "lon": 13.1097493,
+      "tags": {
+        "ele": "2463",
+        "name": "Keuchenscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2199156596,
+      "lat": 47.0323060,
+      "lon": 13.1304385,
+      "tags": {
+        "ele": "2439",
+        "name": "Woisgenscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2199288300,
+      "lat": 47.0704197,
+      "lon": 13.0274035,
+      "tags": {
+        "ele": "2298",
+        "mountain_pass": "yes",
+        "name": "Kolmkarscharte",
+        "name:ru": "Кольмкартшарте",
+        "natural": "saddle",
+        "rtsa_scale": "н/к",
+        "westra_ref": "10914"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2199355996,
+      "lat": 47.0913219,
+      "lon": 13.0779360,
+      "tags": {
+        "ele": "2273",
+        "mountain_pass": "yes",
+        "name": "Ortbergschartl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2207933419,
+      "lat": 47.1333524,
+      "lon": 13.0205866,
+      "tags": {
+        "ele": "2102",
+        "mountain_pass": "yes",
+        "name": "Stanzscharte",
+        "natural": "saddle",
+        "wikidata": "Q21863220"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2207995147,
+      "lat": 47.0904477,
+      "lon": 13.0364706,
+      "tags": {
+        "ele": "2492",
+        "mountain_pass": "yes",
+        "name": "Baukarlscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2280555253,
+      "lat": 47.0743740,
+      "lon": 13.1890501,
+      "tags": {
+        "ele": "2362",
+        "name": "Obere Lainkarscharte",
+        "natural": "saddle",
+        "source:ele": "Laserscan",
+        "source:name": "basemap"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2315891533,
+      "lat": 46.8377089,
+      "lon": 12.8333284,
+      "tags": {
+        "name": "Obergöriach",
+        "place": "village",
+        "postal_code": "9991"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2356037199,
+      "lat": 46.7329589,
+      "lon": 13.2483747,
+      "tags": {
+        "description": "Blick auf die Lienzer Dolomiten",
+        "name": "Tschabitscher",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2428563215,
+      "lat": 46.9810608,
+      "lon": 13.2743297,
+      "tags": {
+        "ele": "2632",
+        "mountain_pass": "yes",
+        "name": "Seeschartl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2458151717,
+      "lat": 47.1227888,
+      "lon": 13.1439673,
+      "tags": {
+        "name": "Blick nach Bad Hofgastein",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2463243048,
+      "lat": 46.9408202,
+      "lon": 13.2072584,
+      "tags": {
+        "description": "Nice view to Möll valley western direction. The villages Semslach, Söbriach and Ausserfragant can be seen from here",
+        "name": "Mölltal Blick",
+        "source": "gps",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2478019682,
+      "lat": 46.9090045,
+      "lon": 12.9989141,
+      "tags": {
+        "ele": "2149",
+        "name": "Staller Tor",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2513422194,
+      "lat": 46.9632314,
+      "lon": 13.3119364,
+      "tags": {
+        "ele": "2766",
+        "mountain_pass": "yes",
+        "name": "Zwenberger Törl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2515023101,
+      "lat": 47.0822240,
+      "lon": 12.8610457,
+      "tags": {
+        "ele": "2599",
+        "mountain_pass": "yes",
+        "name": "Rossscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2515094015,
+      "lat": 47.0900868,
+      "lon": 12.8316185,
+      "tags": {
+        "ele": "2603",
+        "mountain_pass": "yes",
+        "name": "Bretterscharte",
+        "name:ru": "Бреттершарте",
+        "natural": "saddle",
+        "westra_ref": "11717",
+        "wikidata": "Q21859057"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2528594591,
+      "lat": 47.0859797,
+      "lon": 13.3095986,
+      "tags": {
+        "ele": "2309",
+        "name": "Pfannlscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "wikidata": "Q124480718"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529401563,
+      "lat": 47.0635277,
+      "lon": 13.2458489,
+      "tags": {
+        "ele": "2947",
+        "name": "Oberere Grubenkarscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529401565,
+      "lat": 47.0475493,
+      "lon": 13.2398098,
+      "tags": {
+        "ele": "2870",
+        "name": "Radeckscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529401569,
+      "lat": 47.0863208,
+      "lon": 13.2486088,
+      "tags": {
+        "ele": "2722",
+        "name": "Tischlerkarscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529401571,
+      "lat": 47.0739887,
+      "lon": 13.2413714,
+      "tags": {
+        "ele": "2879",
+        "name": "Tischlerspitzscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529401572,
+      "lat": 47.0691556,
+      "lon": 13.2449394,
+      "tags": {
+        "ele": "2853",
+        "name": "Untere Grubenkarscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529401573,
+      "lat": 47.0605185,
+      "lon": 13.2761489,
+      "tags": {
+        "ele": "2676",
+        "mountain_pass": "yes",
+        "name": "Zwischenelendscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529454390,
+      "lat": 47.0015671,
+      "lon": 13.2401147,
+      "tags": {
+        "ele": "2590",
+        "name": "Glantschnigscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529454392,
+      "lat": 47.0270441,
+      "lon": 13.2861412,
+      "tags": {
+        "ele": "2840",
+        "name": "Hannoverscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529454393,
+      "lat": 47.0310246,
+      "lon": 13.2655418,
+      "tags": {
+        "ele": "2730",
+        "name": "Kälberspitzscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529917815,
+      "lat": 46.8510188,
+      "lon": 13.0996676,
+      "tags": {
+        "ele": "2430",
+        "name": "Gößnitztörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529917825,
+      "lat": 46.8435343,
+      "lon": 13.1239142,
+      "tags": {
+        "ele": "2480",
+        "name": "Kaltseetörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529917854,
+      "lat": 46.8978737,
+      "lon": 13.1093170,
+      "tags": {
+        "ele": "2280",
+        "name": "Raggascharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529917861,
+      "lat": 46.8409786,
+      "lon": 13.2327293,
+      "tags": {
+        "ele": "2270",
+        "name": "Salztörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529917891,
+      "lat": 46.8368238,
+      "lon": 13.1661547,
+      "tags": {
+        "ele": "2310",
+        "name": "Seebachtörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529917903,
+      "lat": 46.8889281,
+      "lon": 13.1595774,
+      "tags": {
+        "ele": "2470",
+        "name": "Teuchlscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529917911,
+      "lat": 46.8592266,
+      "lon": 13.1050978,
+      "tags": {
+        "ele": "2550",
+        "name": "Teuchltörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2529917914,
+      "lat": 46.8430056,
+      "lon": 13.1075855,
+      "tags": {
+        "ele": "2540",
+        "name": "Wöllatörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2530040658,
+      "lat": 46.8135943,
+      "lon": 13.0850798,
+      "tags": {
+        "ele": "2460",
+        "name": "Sandfeldtörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2530579239,
+      "lat": 46.8517280,
+      "lon": 13.0406704,
+      "tags": {
+        "ele": "2370",
+        "name": "Trögertörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2530620128,
+      "lat": 46.8192355,
+      "lon": 13.0371973,
+      "tags": {
+        "ele": "2470",
+        "name": "Kreuzlscharte",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2530649959,
+      "lat": 46.8147376,
+      "lon": 12.9739806,
+      "tags": {
+        "ele": "2190",
+        "name": "Zleinitztörl",
+        "natural": "saddle",
+        "source": "data.ktn.gv.at;basemap.at",
+        "source:ele": "data.ktn.gv.at ALS estimation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2554616187,
+      "lat": 46.9825660,
+      "lon": 13.1217626,
+      "tags": {
+        "ele": "2332",
+        "name": "Mauternitzscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2554725135,
+      "lat": 46.9949471,
+      "lon": 13.0173329,
+      "tags": {
+        "ele": "2560",
+        "name": "Saustellscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2554828636,
+      "lat": 46.9792100,
+      "lon": 12.9669685,
+      "tags": {
+        "ele": "2540",
+        "mountain_pass": "yes",
+        "name": "Kluidscharte",
+        "natural": "saddle",
+        "source": "basemap"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2586677740,
+      "lat": 46.7516349,
+      "lon": 12.8362796,
+      "tags": {
+        "ele": "2295",
+        "name": "Kuhleitentörl",
+        "natural": "saddle",
+        "wikidata": "Q21868769"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2586677745,
+      "lat": 46.7518001,
+      "lon": 12.8130225,
+      "tags": {
+        "ele": "2501",
+        "name": "Luggauer Törl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2586677750,
+      "lat": 46.7654669,
+      "lon": 12.8215598,
+      "tags": {
+        "name": "Schartenkamm",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2611043007,
+      "lat": 46.7579260,
+      "lon": 12.8103183,
+      "tags": {
+        "ele": "2497",
+        "name": "Laserztörl",
+        "natural": "saddle",
+        "source": "basemap.at;ÖK50"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2633401281,
+      "lat": 46.8355452,
+      "lon": 12.8870333,
+      "tags": {
+        "ele": "1474",
+        "name": "Zwischenberger Sattel",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2672673213,
+      "lat": 46.9863804,
+      "lon": 13.0999184,
+      "tags": {
+        "ele": "2653",
+        "name": "östl. Oschenikscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2672707121,
+      "lat": 46.9981586,
+      "lon": 13.0758033,
+      "tags": {
+        "ele": "2595",
+        "name": "Astromscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2672707136,
+      "lat": 47.0462249,
+      "lon": 12.9543823,
+      "tags": {
+        "ele": "2910",
+        "name": "Oberes Brettschartl",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2672707140,
+      "lat": 47.0509819,
+      "lon": 12.9546007,
+      "tags": {
+        "ele": "2975",
+        "name": "Kleinfleißscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2672707144,
+      "lat": 47.0677159,
+      "lon": 12.9408938,
+      "tags": {
+        "ele": "2857",
+        "name": "Goldzechscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2698193155,
+      "lat": 47.0172102,
+      "lon": 13.1554307,
+      "tags": {
+        "ele": "2278",
+        "name": "Weißenbachscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2884967154,
+      "lat": 46.9778502,
+      "lon": 12.9995526,
+      "tags": {
+        "ele": "2651",
+        "name": "Ochsentrieb",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2892102989,
+      "lat": 46.9652410,
+      "lon": 12.9975612,
+      "tags": {
+        "ele": "2360",
+        "name": "Schobertörl",
+        "natural": "saddle",
+        "source": "bing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2893090615,
+      "lat": 46.9866780,
+      "lon": 13.0764485,
+      "tags": {
+        "ele": "2564",
+        "name": "Kammscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2916342186,
+      "lat": 46.9657355,
+      "lon": 13.0249991,
+      "tags": {
+        "ele": "2345",
+        "name": "Garnitzenscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2992239980,
+      "lat": 47.1326716,
+      "lon": 13.2605245,
+      "tags": {
+        "ele": "2048",
+        "mountain_pass": "yes",
+        "name": "Hühnerkarscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3007616819,
+      "lat": 47.1050382,
+      "lon": 13.2698122,
+      "tags": {
+        "ele": "2506",
+        "name": "Keesnickelscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3009196532,
+      "lat": 47.0137927,
+      "lon": 12.8108338,
+      "tags": {
+        "ele": "2650",
+        "name": "Alwitzscharte",
+        "natural": "saddle",
+        "source": "basemap.at",
+        "source:ele": "ALS 10m approximation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3009200633,
+      "lat": 47.0916365,
+      "lon": 12.8289871,
+      "tags": {
+        "ele": "2625",
+        "name": "Brennkogelscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3009200637,
+      "lat": 47.0058873,
+      "lon": 12.8102479,
+      "tags": {
+        "ele": "2750",
+        "name": "Bretterscharte",
+        "natural": "saddle",
+        "source": "basemap.at",
+        "source:ele": "ALS"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3009200642,
+      "lat": 46.9552062,
+      "lon": 12.8232377,
+      "tags": {
+        "ele": "2764",
+        "name": "Friedrichsscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3009200645,
+      "lat": 46.9505397,
+      "lon": 12.8130900,
+      "tags": {
+        "ele": "2885",
+        "name": "Georgsscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3009200670,
+      "lat": 46.9421645,
+      "lon": 12.8186932,
+      "tags": {
+        "ele": "2710",
+        "name": "Obere Prititschscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3009200672,
+      "lat": 46.9532837,
+      "lon": 12.8302062,
+      "tags": {
+        "ele": "2790",
+        "name": "Relischscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3009200683,
+      "lat": 47.0128228,
+      "lon": 12.8239943,
+      "tags": {
+        "ele": "2430",
+        "name": "Zopenitzscharte",
+        "natural": "saddle",
+        "source:ele": "ALS 10m approximation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3011111044,
+      "lat": 47.0627717,
+      "lon": 12.8473056,
+      "tags": {
+        "ele": "2360",
+        "name": "Kropfscharte",
+        "natural": "saddle",
+        "source": "basemap.at",
+        "source:ele": "ALS 10m approximation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3011111046,
+      "lat": 47.0614009,
+      "lon": 12.8445961,
+      "tags": {
+        "ele": "2310",
+        "name": "Lacknerscharte",
+        "natural": "saddle",
+        "source": "basemap.at",
+        "source:ele": "ALS 10m approximation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3011111047,
+      "lat": 47.0703963,
+      "lon": 12.8599494,
+      "tags": {
+        "direction": "75",
+        "ele": "2505",
+        "mountain_pass": "yes",
+        "name": "Mauskarscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3011111048,
+      "lat": 47.0783344,
+      "lon": 12.9317630,
+      "tags": {
+        "ele": "3069",
+        "name": "Obere Jausenscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3011111049,
+      "lat": 47.0790484,
+      "lon": 12.9281408,
+      "tags": {
+        "ele": "3024",
+        "name": "Untere Jausenscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3011286233,
+      "lat": 46.9927966,
+      "lon": 12.9963993,
+      "tags": {
+        "ele": "2665",
+        "name": "Bogenitzenscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3011286238,
+      "lat": 47.0390467,
+      "lon": 12.9789758,
+      "tags": {
+        "ele": "2719",
+        "name": "Großzirknitzscharte",
+        "natural": "saddle",
+        "old_name": "Windischscharte",
+        "source": "basemap.at",
+        "source:old_name": "FJLA;ÖK50 bis ca. 1960"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3011286242,
+      "lat": 47.0280435,
+      "lon": 12.9878451,
+      "tags": {
+        "ele": "2726",
+        "name": "Kleinzirknitzscharte",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3031457951,
+      "lat": 46.7852367,
+      "lon": 13.0524593,
+      "tags": {
+        "ele": "2225",
+        "name": "Seidernitztörl",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3144731415,
+      "lat": 46.7429205,
+      "lon": 13.1538556,
+      "tags": {
+        "name": "Jägerhochsitz mit Panorama",
+        "tourism": "viewpoint",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3336751931,
+      "lat": 46.7299012,
+      "lon": 12.8215546,
+      "tags": {
+        "ele": "1950",
+        "name": "Millnatzensattel",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3336805799,
+      "lat": 46.7177924,
+      "lon": 12.9670121,
+      "tags": {
+        "ele": "981",
+        "mountain_pass": "yes",
+        "name": "Gailbergsattel",
+        "natural": "saddle",
+        "wikidata": "Q956255",
+        "wikimedia_commons": "Category:Gailbergsattel",
+        "wikipedia": "de:Gailbergsattel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3535960800,
+      "lat": 47.0402302,
+      "lon": 13.2426463,
+      "tags": {
+        "ele": "2528",
+        "name": "Kleinhappscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4260328772,
+      "lat": 46.7330448,
+      "lon": 13.0819731,
+      "tags": {
+        "height": "6.9",
+        "material": "wood",
+        "name": "Aussichtsplattform DrAUENland",
+        "start_date": "2007",
+        "step_count": "19",
+        "tourism": "viewpoint",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4270584264,
+      "lat": 46.8188268,
+      "lon": 12.9922751,
+      "tags": {
+        "ele": "2329",
+        "name": "Gippertörl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4270584269,
+      "lat": 46.9210256,
+      "lon": 13.0053830,
+      "tags": {
+        "ele": "2450",
+        "name": "Klenitzentörl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4270584279,
+      "lat": 46.9142220,
+      "lon": 12.8429639,
+      "tags": {
+        "ele": "2528",
+        "name": "Steinscharte",
+        "natural": "saddle",
+        "source:ele": "Laserscan",
+        "source:name": "basemap"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4270584280,
+      "lat": 46.9172529,
+      "lon": 13.0126712,
+      "tags": {
+        "name": "Tröger Törl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4340889629,
+      "lat": 47.0111006,
+      "lon": 12.8684708,
+      "tags": {
+        "name": "Jungfernsprung",
+        "tourism": "viewpoint",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4396437015,
+      "lat": 47.1290257,
+      "lon": 13.1974227,
+      "tags": {
+        "ele": "2136",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4633095445,
+      "lat": 47.0924031,
+      "lon": 12.9442334,
+      "tags": {
+        "ele": "2657",
+        "name": "Goldlacklscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4848344232,
+      "lat": 47.1153642,
+      "lon": 13.1366698,
+      "tags": {
+        "name": "Wasserfall",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4848344233,
+      "lat": 47.1172724,
+      "lon": 13.1363542,
+      "tags": {
+        "name": "Wasserfall",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5023023138,
+      "lat": 46.9617284,
+      "lon": 12.9998544,
+      "tags": {
+        "name": "Makernischarte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5636202355,
+      "lat": 47.0975003,
+      "lon": 12.8094879,
+      "tags": {
+        "ele": "2833",
+        "name": "Klobenscharte",
+        "natural": "saddle",
+        "source:ele": "Laserscan",
+        "source:name": "https://de.wikipedia.org/wiki/Brennkogel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5739288829,
+      "lat": 46.8595157,
+      "lon": 13.3062286,
+      "tags": {
+        "name": "Panoramablick",
+        "tourism": "viewpoint",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777424532,
+      "lat": 47.0390120,
+      "lon": 12.8439941,
+      "tags": {
+        "direction": "W",
+        "name": "Kirche und Großglockner",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5981864917,
+      "lat": 46.7164917,
+      "lon": 13.2303447,
+      "tags": {
+        "name": "Grafenweger Wände",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6192082596,
+      "lat": 46.8747422,
+      "lon": 12.9895306,
+      "tags": {
+        "name": "Tresdorf",
+        "place": "village",
+        "population": "278",
+        "population:date": "2018-01-01"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6250026635,
+      "lat": 47.1048592,
+      "lon": 13.0944291,
+      "tags": {
+        "alt_name": "Jungerscharte",
+        "ele": "2163",
+        "name": "Zitterauer Scharte",
+        "natural": "saddle",
+        "wikimedia_commons": "File:Wanderwegweiser Stubnerkogel.jpg"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6256136181,
+      "lat": 46.7254919,
+      "lon": 12.8396337,
+      "tags": {
+        "ele": "2113",
+        "name": "Joch",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6268139480,
+      "lat": 47.0255822,
+      "lon": 13.1138878,
+      "tags": {
+        "alt_name": "Ulschartl",
+        "ele": "2493",
+        "name": "Uhlschartl",
+        "natural": "saddle",
+        "source:alt_name": "basemap",
+        "source:name": "https://gastein-im-bild.info/gvflurn.html"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6640582985,
+      "lat": 47.0808784,
+      "lon": 12.8426470,
+      "tags": {
+        "ele": "2504",
+        "name": "Hochtor",
+        "name:ru": "Хохтор",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6907020145,
+      "lat": 47.0432244,
+      "lon": 12.9566844,
+      "tags": {
+        "ele": "2786",
+        "name": "Untere Brettscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7803210985,
+      "lat": 46.7868128,
+      "lon": 13.1556828,
+      "tags": {
+        "name": "Aussichtspunkt Habrastl",
+        "name:en": "viewpoint halbrastel",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8128397369,
+      "lat": 46.8210085,
+      "lon": 13.0810956,
+      "tags": {
+        "ele": "2426",
+        "name": "Kirschentörl",
+        "natural": "saddle",
+        "source": "basemap.at"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8308835971,
+      "lat": 46.9405059,
+      "lon": 12.8221434,
+      "tags": {
+        "name": "Untere Prititschscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9123575312,
+      "lat": 47.1069913,
+      "lon": 13.2673014,
+      "tags": {
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9131435006,
+      "lat": 46.8287257,
+      "lon": 13.0248644,
+      "tags": {
+        "ele": "2220",
+        "name": "Saberntörl",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9532698128,
+      "lat": 47.0827938,
+      "lon": 13.2091612,
+      "tags": {
+        "name": "Obere Marchriedlscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9532698129,
+      "lat": 47.0861159,
+      "lon": 13.2084128,
+      "tags": {
+        "name": "Untere Marchriedlscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9790041545,
+      "lat": 46.8654692,
+      "lon": 12.9306231,
+      "tags": {
+        "name": "Blick Lienzer Dolomiten",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9851450296,
+      "lat": 46.9794682,
+      "lon": 13.1540868,
+      "tags": {
+        "name": "Panorama Information",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9984763781,
+      "lat": 47.1307196,
+      "lon": 13.1611775,
+      "tags": {
+        "amenity": "bench",
+        "material": "wood",
+        "name": "Hermann Altenhuber Platzl",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10147026937,
+      "lat": 47.1123950,
+      "lon": 13.0988239,
+      "tags": {
+        "name": "Glocknerblick",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10748372332,
+      "lat": 47.0387750,
+      "lon": 12.9671408,
+      "tags": {
+        "ele": "2727",
+        "name": "Tramerscharte",
+        "natural": "saddle",
+        "source": "https://commons.wikimedia.org/wiki/File:Denkschriften_-_%C3%96sterreichische_Akademie_der_Wissenschaften_(1912)_(20235161574).jpg"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11329292046,
+      "lat": 47.1160744,
+      "lon": 13.1349554,
+      "tags": {
+        "name": "Place Philippa",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11350907702,
+      "lat": 47.1173518,
+      "lon": 12.8274877,
+      "tags": {
+        "ele": "2402",
+        "name": "Fuscher Törl",
+        "natural": "saddle",
+        "note": "das ist hier der physisch niedrigste Übergang zwischen Fuscher und Seidlwinkltal, aber nicht die höchste Stelle der Passstraße (die liegt beim Gedenkzeichen weiter westlich)",
+        "source:ele": "Laserscan"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11980997167,
+      "lat": 46.8543578,
+      "lon": 12.9268004,
+      "tags": {
+        "name": "Lainach",
+        "place": "village",
+        "population": "430",
+        "population:date": "2024-01-01",
+        "source:population": "wikipedia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12973411784,
+      "lat": 46.7243720,
+      "lon": 12.9055818,
+      "tags": {
+        "ele": "1941",
+        "name": "Mukulinsattel",
+        "natural": "saddle",
+        "source:ele": "Lasergeländemodell Land Kärnten"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13004640546,
+      "lat": 47.0503604,
+      "lon": 12.9653697,
+      "tags": {
+        "ele": "2802",
+        "name": "Römerscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13004640547,
+      "lat": 47.0527223,
+      "lon": 12.9619823,
+      "tags": {
+        "ele": "3024",
+        "fixme": "ist das wirklich ein Sattel oder was ist das hier? Jedenfalls wird hier vom Observatorium Schneechemie gemessen",
+        "name": "Lieslstange",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13277648517,
+      "lat": 47.0486718,
+      "lon": 13.1117536,
+      "tags": {
+        "ele": "2528",
+        "natural": "saddle",
+        "source:ele": "ÖK50"
+      }
+    }
+
+  ]
+}

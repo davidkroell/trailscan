@@ -1,0 +1,1737 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-15T15:16:15Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+    {
+      "type": "node",
+      "id": 256041740,
+      "lat": 47.1092664,
+      "lon": 12.3453356,
+      "tags": {
+        "alt_name": "Grossvenediger",
+        "alt_name:en": "Great Venetian",
+        "alt_name:pl": "Wielki Wenecjanin",
+        "ele": "3657",
+        "isolation": "26",
+        "name": "Großvenediger",
+        "natural": "peak",
+        "prominence": "1199",
+        "source:ele": "ÖK50 des BEV und Laserscan Geländemodell von https://www.salzburg.gv.at/sagis",
+        "summit:cross": "yes",
+        "summit:cross:inscription": "Dem Schöpfer der 'weltalten Maiestät' zum Dank für tausendfache gute Hemkehr! Die Bergrettung Prägraten und Bergführer Prägraten. Prägraten, im August 1982",
+        "summit:cross:material": "material=metal;wood",
+        "summit:register": "no",
+        "wikidata": "Q697907",
+        "wikipedia": "de:Großvenediger"
+      }
+    },
+    {
+      "type": "node",
+      "id": 256041881,
+      "lat": 47.0467322,
+      "lon": 12.3591005,
+      "tags": {
+        "ele": "3155",
+        "name": "Kreuzspitze",
+        "natural": "peak",
+        "summit:cross": "yes",
+        "wikidata": "Q872331",
+        "wikipedia": "de:Kreuzspitze (Venedigergruppe)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 256042004,
+      "lat": 47.1008482,
+      "lon": 12.3641464,
+      "tags": {
+        "ele": "3559",
+        "name": "Rainerhorn",
+        "natural": "peak",
+        "wikidata": "Q874774",
+        "wikipedia": "de:Rainerhorn"
+      }
+    },
+    {
+      "type": "node",
+      "id": 256042745,
+      "lat": 47.0397249,
+      "lon": 12.3498374,
+      "tags": {
+        "ele": "2820",
+        "name": "Rote Säule",
+        "natural": "peak",
+        "wikidata": "Q2168259",
+        "wikipedia": "de:Rote Säule (Wallhornkamm)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 502448078,
+      "lat": 47.1029951,
+      "lon": 12.3550041,
+      "tags": {
+        "ele": "3421",
+        "mountain_pass": "yes",
+        "name": "Rainertörl",
+        "natural": "saddle",
+        "place": "locality"
+      }
+    },
+    {
+      "type": "node",
+      "id": 527375225,
+      "lat": 47.1171539,
+      "lon": 12.3574996,
+      "tags": {
+        "ele": "3470",
+        "name": "Kleinvenediger",
+        "natural": "peak",
+        "source:ele": "de.wikipedia.org",
+        "wikidata": "Q1773928",
+        "wikipedia": "de:Kleinvenediger"
+      }
+    },
+    {
+      "type": "node",
+      "id": 795647943,
+      "lat": 47.0998339,
+      "lon": 12.3767797,
+      "tags": {
+        "ele": "3457",
+        "name": "Hoher Zaun",
+        "natural": "peak",
+        "source": "geoimage.at",
+        "wikidata": "Q1623956",
+        "wikipedia": "de:Hoher Zaun"
+      }
+    },
+    {
+      "type": "node",
+      "id": 795647944,
+      "lat": 47.1038414,
+      "lon": 12.3701663,
+      "tags": {
+        "ele": "3506",
+        "name": "Schwarze Wand",
+        "natural": "peak",
+        "wikidata": "Q2253761",
+        "wikipedia": "de:Schwarze Wand (Venedigergruppe)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 938515148,
+      "lat": 47.1019643,
+      "lon": 12.3500609,
+      "tags": {
+        "ele": "3506",
+        "name": "Hohes Aderl",
+        "natural": "peak",
+        "wikidata": "Q21876392",
+        "wikipedia": "de:Hohes Aderl"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1405401301,
+      "lat": 47.0385543,
+      "lon": 12.3636721,
+      "tags": {
+        "ele": "2915",
+        "name": "Vorderer Sajatkopf",
+        "natural": "peak",
+        "summit:cross": "yes",
+        "wikidata": "Q21876472"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1405451034,
+      "lat": 47.0539304,
+      "lon": 12.3635437,
+      "tags": {
+        "alt_name": "Zopetscharte",
+        "ele": "2980",
+        "mountain_pass": "yes",
+        "name": "Zopetscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1405526920,
+      "lat": 47.0497874,
+      "lon": 12.3614189,
+      "tags": {
+        "ele": "2948",
+        "name": "Tulpscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1446398634,
+      "lat": 47.0719328,
+      "lon": 12.3290950,
+      "tags": {
+        "ele": "2852",
+        "name": "Kleiner Happ",
+        "natural": "peak",
+        "wikidata": "Q17265636",
+        "wikipedia": "de:Kleiner Happ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1553807187,
+      "lat": 47.0473765,
+      "lon": 12.3548387,
+      "tags": {
+        "ele": "3033",
+        "name": "Schernerskopf",
+        "natural": "peak",
+        "wikidata": "Q17326059",
+        "wikipedia": "de:Schernerskopf"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1694911079,
+      "lat": 47.0515576,
+      "lon": 12.3625790,
+      "tags": {
+        "ele": "3054",
+        "name": "Tulpspitze",
+        "natural": "peak",
+        "wikidata": "Q17326648",
+        "wikipedia": "de:Tulpspitze"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1694911080,
+      "lat": 47.0574639,
+      "lon": 12.3614203,
+      "tags": {
+        "alt_name": "Zopatspitze",
+        "ele": "3198",
+        "name": "Zopetspitze",
+        "natural": "peak",
+        "summit:cross": "yes",
+        "wikidata": "Q17327125",
+        "wikipedia": "de:Zopetspitze"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2028001768,
+      "lat": 47.0186164,
+      "lon": 12.3334908,
+      "tags": {
+        "name": "Venedigerblick",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2028090791,
+      "lat": 47.0442212,
+      "lon": 12.3203616,
+      "tags": {
+        "ele": "2778",
+        "name": "Schlüsselspitze",
+        "natural": "peak",
+        "summit:cross": "yes",
+        "summit:register": "yes",
+        "wikidata": "Q17326102",
+        "wikipedia": "de:Schlüsselspitze"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2028127936,
+      "lat": 47.0317463,
+      "lon": 12.3243171,
+      "tags": {
+        "ele": "2257",
+        "name": "Finsterwitzkopf",
+        "natural": "peak",
+        "wikidata": "Q17321651",
+        "wikipedia": "de:Finsterwitzkopf"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2028128042,
+      "lat": 47.0413830,
+      "lon": 12.3497271,
+      "tags": {
+        "ele": "2778",
+        "mountain_pass": "yes",
+        "name": "Sajatscharte",
+        "natural": "saddle",
+        "source:ele": "ÖK50"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2671053721,
+      "lat": 47.0659979,
+      "lon": 12.3694820,
+      "tags": {
+        "ele": "3074",
+        "name": "Gastacherwände",
+        "natural": "peak",
+        "wikidata": "Q17321861",
+        "wikipedia": "de:Gastacher Wände"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2671053722,
+      "lat": 47.0820175,
+      "lon": 12.3834305,
+      "tags": {
+        "name": "Glexenköpfe",
+        "natural": "peak",
+        "wikidata": "Q21876412",
+        "wikipedia": "de:Glexenköpfe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2671053724,
+      "lat": 47.0432722,
+      "lon": 12.3618745,
+      "tags": {
+        "ele": "3092",
+        "name": "Hinterer Sajatkopf",
+        "natural": "peak",
+        "note": "in Wikipedia 3098m",
+        "source:ele": "basemap",
+        "wikidata": "Q17322292",
+        "wikipedia": "de:Hinterer Sajatkopf"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2671053726,
+      "lat": 47.0762017,
+      "lon": 12.3524964,
+      "tags": {
+        "ele": "2816",
+        "name": "Kapunitzköpfl",
+        "natural": "peak",
+        "wikidata": "Q21876415"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2671053727,
+      "lat": 47.0439401,
+      "lon": 12.3506717,
+      "tags": {
+        "ele": "2888",
+        "name": "Knappenspitze",
+        "natural": "peak",
+        "wikidata": "Q21876448"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2671053728,
+      "lat": 47.0906295,
+      "lon": 12.3675995,
+      "tags": {
+        "ele": "3244",
+        "name": "Mullwitzaderl",
+        "natural": "peak",
+        "wikidata": "Q21866180"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2671053729,
+      "lat": 47.0802969,
+      "lon": 12.3590262,
+      "tags": {
+        "ele": "2960",
+        "name": "Mullwitzköpfl",
+        "natural": "peak",
+        "wikidata": "Q21876414"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2671053735,
+      "lat": 47.0740574,
+      "lon": 12.3854193,
+      "tags": {
+        "ele": "3045",
+        "name": "Wallhorntörl",
+        "natural": "saddle",
+        "place": "locality"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2676984875,
+      "lat": 47.1117788,
+      "lon": 12.3572582,
+      "tags": {
+        "ele": "3407",
+        "name": "Venedigerscharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4074130705,
+      "lat": 47.0606186,
+      "lon": 12.3620496,
+      "tags": {
+        "ele": "3087",
+        "name": "Zopetkopf",
+        "natural": "peak",
+        "wikidata": "Q17327123",
+        "wikipedia": "de:Zopetkopf"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583029333,
+      "lat": 47.0271611,
+      "lon": 12.3246616,
+      "tags": {
+        "ele": "2065",
+        "name": "Vorderer Finsterwitzkopf",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7977082767,
+      "lat": 47.1136265,
+      "lon": 12.3420422,
+      "tags": {
+        "ele": "3375",
+        "name": "Meynow-Scharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7977082768,
+      "lat": 47.1153371,
+      "lon": 12.3408076,
+      "tags": {
+        "ele": "3283",
+        "name": "Keidel-Scharte",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41848886,
+      "nodes": [
+        517354625,
+        1813875484,
+        1813875470,
+        11035359661,
+        517354627,
+        1813875465,
+        11035359002,
+        517354628,
+        517354629,
+        517354631,
+        517354632,
+        1813875434,
+        1813875430,
+        517354633,
+        517354634,
+        1813875423,
+        1813875424,
+        1813875426,
+        1813875428,
+        1813875432,
+        517354637,
+        1813875435,
+        1813875439,
+        1813875438,
+        1813875443,
+        1813875446,
+        1813875448,
+        1813875450,
+        1813875461,
+        1813875462,
+        1813875463,
+        517354638,
+        1813875464,
+        1813875466,
+        1813875467,
+        1813875468,
+        1813875469,
+        517354639,
+        1813875471,
+        1813875478,
+        1813875483,
+        1813875489,
+        1813875488,
+        1813875482,
+        1813875476,
+        1813875485,
+        1813875490,
+        1813875496,
+        1813875498,
+        517354640,
+        517354641,
+        1813875511,
+        1813875507,
+        11035359664,
+        11035359663,
+        9050981302,
+        1813875515,
+        1813875516,
+        1813875513,
+        517354642,
+        1813875505,
+        11035359662,
+        1813875503,
+        11035359018,
+        1813875499,
+        11035359017,
+        1813875497,
+        1813875493,
+        1813875491,
+        1813875487,
+        1813875480,
+        1813875477,
+        1813875473,
+        1813875472,
+        1813875474,
+        1813875475,
+        1813875479,
+        1813875481,
+        1813875486,
+        1813875492,
+        1813875495,
+        11035359014,
+        1813875494,
+        517354625
+      ],
+      "tags": {
+        "ele": "2664",
+        "name": "Eissee",
+        "natural": "water",
+        "source": "geoimage.at",
+        "wikidata": "Q21876431"
+      }
+    },
+    {
+      "type": "way",
+      "id": 77928416,
+      "nodes": [
+        915827040,
+        915827088,
+        915826993,
+        915827150,
+        915827040
+      ],
+      "tags": {
+        "building": "yes",
+        "ele": "2521",
+        "email": "admin@eisseehuette.at",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/4/42/Eisseeh%C3%BCtte.jpg",
+        "name": "Eisseehütte",
+        "operator": "private",
+        "phone": "+43 680 2041698",
+        "source": "geoimage.at",
+        "tourism": "alpine_hut",
+        "website": "https://www.eisseehuette.at/index.php",
+        "wikidata": "Q1320444",
+        "wikipedia": "de:Eisseehütte"
+      }
+    },
+    {
+      "type": "way",
+      "id": 140263351,
+      "nodes": [
+        1536857841,
+        13171944814,
+        13171944813,
+        13171944812,
+        13171944811,
+        1536857849,
+        13171944815,
+        13171944816,
+        13171944817,
+        13171944818,
+        1536857851,
+        2773887449,
+        2773887447,
+        2773887446,
+        1536857844,
+        1536857840,
+        1536857841
+      ],
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "capacity": "50",
+        "cuisine": "regional",
+        "ele": "2121",
+        "email": "office@johannis-huette.at",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/8/85/Johannish%C3%BCtte_mit_Gr.Venediger.jpg",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "Johannishütte",
+        "operator": "DAV",
+        "phone": "+43 4877 5150",
+        "shower": "yes",
+        "source": "geoimage.at",
+        "start_date": "1857",
+        "tourism": "alpine_hut",
+        "website": "https://www.johannis-huette.at/",
+        "wikidata": "Q1290343",
+        "wikipedia": "de:Johannishütte"
+      }
+    },
+    {
+      "type": "way",
+      "id": 141650824,
+      "nodes": [
+        1550553403,
+        6096840143,
+        6096840164,
+        6096840138,
+        6096840165,
+        6096840166,
+        6096840167,
+        6096840168,
+        6096840144,
+        6096840169,
+        6096840149,
+        1550553412,
+        1550553403
+      ],
+      "tags": {
+        "building": "yes",
+        "ele": "2600",
+        "email": "kratzer@sajathuette.at",
+        "image": "http://upload.wikimedia.org/wikipedia/de/0/0b/Sajath%C3%BCtte_von_oben.JPG",
+        "name": "Sajathütte",
+        "operator": "private",
+        "phone": "+43 664 5454460",
+        "tourism": "alpine_hut",
+        "website": "https://www.sajathuette.at/",
+        "wikidata": "Q997523",
+        "wikipedia": "de:Sajathütte"
+      }
+    },
+    {
+      "type": "way",
+      "id": 150175003,
+      "nodes": [
+        1631059887,
+        1631059889,
+        1631059891,
+        1631059893,
+        1631059917,
+        1631059918,
+        1631059921,
+        1631059925,
+        1631059934,
+        1631059931,
+        1631059928,
+        1631059923,
+        1631059919,
+        1631059916,
+        1631059900,
+        1631059897,
+        1631059895,
+        1631059887
+      ],
+      "tags": {
+        "building": "yes",
+        "ele": "1777",
+        "mobile": "+43 664 2207577",
+        "name": "Stabanthütte",
+        "tourism": "alpine_hut",
+        "website": "https://www.stabanthuette.at"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192253929,
+      "nodes": [
+        2028127970,
+        2028127973,
+        2028127995,
+        2028128002,
+        2028127992,
+        2028128005,
+        2028127967,
+        2028127956,
+        2028127963,
+        2028127960,
+        2028127970
+      ],
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "cuisine": "regional",
+        "ele": "2962",
+        "internet_access": "yes",
+        "internet_access:fee": "yes",
+        "name": "Defreggerhaus",
+        "operator": "ÖTK",
+        "source": "geoimage.at",
+        "tourism": "alpine_hut",
+        "website": "http://defregger.schutz.haus/",
+        "wikidata": "Q1182756",
+        "wikipedia": "de:Defreggerhaus"
+      }
+    },
+    {
+      "type": "way",
+      "id": 649723762,
+      "nodes": [
+        6096840082,
+        6096840081,
+        6096840080,
+        6096840079,
+        6096840082
+      ],
+      "tags": {
+        "building": "hut",
+        "building:levels": "1",
+        "roof:shape": "gabled"
+      }
+    },
+    {
+      "type": "way",
+      "id": 701034455,
+      "nodes": [
+        6583642707,
+        6583642708,
+        6583642709,
+        6583642710,
+        6583642711,
+        6583642712,
+        6583642713,
+        6583642714,
+        6583642715,
+        6583642716,
+        6583642717,
+        6583642718,
+        6583642719,
+        6583642707
+      ],
+      "tags": {
+        "name": "Johannishütte Teich",
+        "natural": "water",
+        "water": "pond"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1366676732,
+      "nodes": [
+        12657245569,
+        12657245566,
+        12657245567,
+        12657245568,
+        12657245569
+      ],
+      "tags": {
+        "building": "hut",
+        "building:levels": "1"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1631059887,
+      "lat": 47.0243509,
+      "lon": 12.3399581
+    },
+    {
+      "type": "node",
+      "id": 1631059889,
+      "lat": 47.0243528,
+      "lon": 12.3399396
+    },
+    {
+      "type": "node",
+      "id": 1631059891,
+      "lat": 47.0243723,
+      "lon": 12.3399181
+    },
+    {
+      "type": "node",
+      "id": 1631059893,
+      "lat": 47.0243745,
+      "lon": 12.3398961
+    },
+    {
+      "type": "node",
+      "id": 1631059895,
+      "lat": 47.0243804,
+      "lon": 12.3400165
+    },
+    {
+      "type": "node",
+      "id": 1631059897,
+      "lat": 47.0243906,
+      "lon": 12.3400180
+    },
+    {
+      "type": "node",
+      "id": 1631059900,
+      "lat": 47.0243917,
+      "lon": 12.3400068
+    },
+    {
+      "type": "node",
+      "id": 1631059916,
+      "lat": 47.0244046,
+      "lon": 12.3400097
+    },
+    {
+      "type": "node",
+      "id": 1631059917,
+      "lat": 47.0244075,
+      "lon": 12.3398598
+    },
+    {
+      "type": "node",
+      "id": 1631059918,
+      "lat": 47.0244101,
+      "lon": 12.3398383
+    },
+    {
+      "type": "node",
+      "id": 1631059919,
+      "lat": 47.0244149,
+      "lon": 12.3400286
+    },
+    {
+      "type": "node",
+      "id": 1631059921,
+      "lat": 47.0244254,
+      "lon": 12.3398219
+    },
+    {
+      "type": "node",
+      "id": 1631059923,
+      "lat": 47.0244293,
+      "lon": 12.3400227
+    },
+    {
+      "type": "node",
+      "id": 1631059925,
+      "lat": 47.0244499,
+      "lon": 12.3398259
+    },
+    {
+      "type": "node",
+      "id": 1631059928,
+      "lat": 47.0244520,
+      "lon": 12.3400275
+    },
+    {
+      "type": "node",
+      "id": 1631059931,
+      "lat": 47.0245021,
+      "lon": 12.3399728
+    },
+    {
+      "type": "node",
+      "id": 1631059934,
+      "lat": 47.0245055,
+      "lon": 12.3399377
+    },
+    {
+      "type": "node",
+      "id": 1550553403,
+      "lat": 47.0380446,
+      "lon": 12.3533370
+    },
+    {
+      "type": "node",
+      "id": 1550553412,
+      "lat": 47.0380718,
+      "lon": 12.3534791
+    },
+    {
+      "type": "node",
+      "id": 6096840138,
+      "lat": 47.0379971,
+      "lon": 12.3533254
+    },
+    {
+      "type": "node",
+      "id": 6096840143,
+      "lat": 47.0380231,
+      "lon": 12.3533201
+    },
+    {
+      "type": "node",
+      "id": 6096840144,
+      "lat": 47.0380360,
+      "lon": 12.3535306
+    },
+    {
+      "type": "node",
+      "id": 6096840149,
+      "lat": 47.0380594,
+      "lon": 12.3535148
+    },
+    {
+      "type": "node",
+      "id": 6096840164,
+      "lat": 47.0380188,
+      "lon": 12.3533167
+    },
+    {
+      "type": "node",
+      "id": 6096840165,
+      "lat": 47.0379273,
+      "lon": 12.3533530
+    },
+    {
+      "type": "node",
+      "id": 6096840166,
+      "lat": 47.0379165,
+      "lon": 12.3533899
+    },
+    {
+      "type": "node",
+      "id": 6096840167,
+      "lat": 47.0379438,
+      "lon": 12.3535321
+    },
+    {
+      "type": "node",
+      "id": 6096840169,
+      "lat": 47.0380567,
+      "lon": 12.3535224
+    },
+    {
+      "type": "node",
+      "id": 6096840168,
+      "lat": 47.0379652,
+      "lon": 12.3535587
+    },
+    {
+      "type": "node",
+      "id": 1536857840,
+      "lat": 47.0599060,
+      "lon": 12.3344155
+    },
+    {
+      "type": "node",
+      "id": 1536857841,
+      "lat": 47.0599459,
+      "lon": 12.3342809
+    },
+    {
+      "type": "node",
+      "id": 1536857844,
+      "lat": 47.0599573,
+      "lon": 12.3344482
+    },
+    {
+      "type": "node",
+      "id": 1536857849,
+      "lat": 47.0601369,
+      "lon": 12.3344088
+    },
+    {
+      "type": "node",
+      "id": 1536857851,
+      "lat": 47.0600442,
+      "lon": 12.3345019
+    },
+    {
+      "type": "node",
+      "id": 2773887446,
+      "lat": 47.0599459,
+      "lon": 12.3344869
+    },
+    {
+      "type": "node",
+      "id": 2773887447,
+      "lat": 47.0599902,
+      "lon": 12.3345152
+    },
+    {
+      "type": "node",
+      "id": 2773887449,
+      "lat": 47.0600020,
+      "lon": 12.3344750
+    },
+    {
+      "type": "node",
+      "id": 6583642707,
+      "lat": 47.0599014,
+      "lon": 12.3345874
+    },
+    {
+      "type": "node",
+      "id": 6583642708,
+      "lat": 47.0599004,
+      "lon": 12.3346008
+    },
+    {
+      "type": "node",
+      "id": 6583642709,
+      "lat": 47.0598941,
+      "lon": 12.3346152
+    },
+    {
+      "type": "node",
+      "id": 6583642710,
+      "lat": 47.0598846,
+      "lon": 12.3346209
+    },
+    {
+      "type": "node",
+      "id": 6583642711,
+      "lat": 47.0598747,
+      "lon": 12.3346224
+    },
+    {
+      "type": "node",
+      "id": 6583642712,
+      "lat": 47.0598652,
+      "lon": 12.3346193
+    },
+    {
+      "type": "node",
+      "id": 6583642713,
+      "lat": 47.0598596,
+      "lon": 12.3345987
+    },
+    {
+      "type": "node",
+      "id": 6583642714,
+      "lat": 47.0598596,
+      "lon": 12.3345812
+    },
+    {
+      "type": "node",
+      "id": 6583642715,
+      "lat": 47.0598635,
+      "lon": 12.3345641
+    },
+    {
+      "type": "node",
+      "id": 6583642716,
+      "lat": 47.0598719,
+      "lon": 12.3345543
+    },
+    {
+      "type": "node",
+      "id": 6583642717,
+      "lat": 47.0598821,
+      "lon": 12.3345507
+    },
+    {
+      "type": "node",
+      "id": 6583642718,
+      "lat": 47.0598948,
+      "lon": 12.3345549
+    },
+    {
+      "type": "node",
+      "id": 6583642719,
+      "lat": 47.0599007,
+      "lon": 12.3345683
+    },
+    {
+      "type": "node",
+      "id": 13171944811,
+      "lat": 47.0601060,
+      "lon": 12.3343891
+    },
+    {
+      "type": "node",
+      "id": 13171944812,
+      "lat": 47.0601197,
+      "lon": 12.3343428
+    },
+    {
+      "type": "node",
+      "id": 13171944813,
+      "lat": 47.0600781,
+      "lon": 12.3343162
+    },
+    {
+      "type": "node",
+      "id": 13171944814,
+      "lat": 47.0600658,
+      "lon": 12.3343576
+    },
+    {
+      "type": "node",
+      "id": 13171944815,
+      "lat": 47.0601270,
+      "lon": 12.3344423
+    },
+    {
+      "type": "node",
+      "id": 13171944816,
+      "lat": 47.0601511,
+      "lon": 12.3344577
+    },
+    {
+      "type": "node",
+      "id": 13171944817,
+      "lat": 47.0601324,
+      "lon": 12.3345206
+    },
+    {
+      "type": "node",
+      "id": 13171944818,
+      "lat": 47.0600536,
+      "lon": 12.3344703
+    },
+    {
+      "type": "node",
+      "id": 2028127956,
+      "lat": 47.0835952,
+      "lon": 12.3622287
+    },
+    {
+      "type": "node",
+      "id": 2028127960,
+      "lat": 47.0836058,
+      "lon": 12.3621123
+    },
+    {
+      "type": "node",
+      "id": 2028127963,
+      "lat": 47.0836199,
+      "lon": 12.3622219
+    },
+    {
+      "type": "node",
+      "id": 2028127967,
+      "lat": 47.0836200,
+      "lon": 12.3624216
+    },
+    {
+      "type": "node",
+      "id": 2028127970,
+      "lat": 47.0836746,
+      "lon": 12.3620932
+    },
+    {
+      "type": "node",
+      "id": 2028127973,
+      "lat": 47.0836840,
+      "lon": 12.3621663
+    },
+    {
+      "type": "node",
+      "id": 2028127992,
+      "lat": 47.0837086,
+      "lon": 12.3622219
+    },
+    {
+      "type": "node",
+      "id": 2028127995,
+      "lat": 47.0837131,
+      "lon": 12.3621582
+    },
+    {
+      "type": "node",
+      "id": 2028128002,
+      "lat": 47.0837209,
+      "lon": 12.3622185
+    },
+    {
+      "type": "node",
+      "id": 2028128005,
+      "lat": 47.0837303,
+      "lon": 12.3623910
+    },
+    {
+      "type": "node",
+      "id": 6096840079,
+      "lat": 47.0164802,
+      "lon": 12.3812324
+    },
+    {
+      "type": "node",
+      "id": 6096840080,
+      "lat": 47.0164625,
+      "lon": 12.3812077
+    },
+    {
+      "type": "node",
+      "id": 6096840081,
+      "lat": 47.0164820,
+      "lon": 12.3811777
+    },
+    {
+      "type": "node",
+      "id": 6096840082,
+      "lat": 47.0164997,
+      "lon": 12.3812024
+    },
+    {
+      "type": "node",
+      "id": 12657245566,
+      "lat": 47.0163011,
+      "lon": 12.3868244
+    },
+    {
+      "type": "node",
+      "id": 12657245567,
+      "lat": 47.0163047,
+      "lon": 12.3867480
+    },
+    {
+      "type": "node",
+      "id": 12657245568,
+      "lat": 47.0163476,
+      "lon": 12.3867524
+    },
+    {
+      "type": "node",
+      "id": 12657245569,
+      "lat": 47.0163439,
+      "lon": 12.3868288
+    },
+    {
+      "type": "node",
+      "id": 915826993,
+      "lat": 47.0556384,
+      "lon": 12.3790380
+    },
+    {
+      "type": "node",
+      "id": 915827040,
+      "lat": 47.0555308,
+      "lon": 12.3788299
+    },
+    {
+      "type": "node",
+      "id": 915827088,
+      "lat": 47.0556392,
+      "lon": 12.3788307
+    },
+    {
+      "type": "node",
+      "id": 915827150,
+      "lat": 47.0555300,
+      "lon": 12.3790372
+    },
+    {
+      "type": "node",
+      "id": 517354632,
+      "lat": 47.0635563,
+      "lon": 12.3863034
+    },
+    {
+      "type": "node",
+      "id": 517354633,
+      "lat": 47.0631260,
+      "lon": 12.3857004
+    },
+    {
+      "type": "node",
+      "id": 517354634,
+      "lat": 47.0630542,
+      "lon": 12.3852092
+    },
+    {
+      "type": "node",
+      "id": 517354637,
+      "lat": 47.0632341,
+      "lon": 12.3840191
+    },
+    {
+      "type": "node",
+      "id": 517354638,
+      "lat": 47.0639938,
+      "lon": 12.3837205
+    },
+    {
+      "type": "node",
+      "id": 517354639,
+      "lat": 47.0645813,
+      "lon": 12.3833634
+    },
+    {
+      "type": "node",
+      "id": 1813875423,
+      "lat": 47.0629941,
+      "lon": 12.3849984
+    },
+    {
+      "type": "node",
+      "id": 1813875424,
+      "lat": 47.0629988,
+      "lon": 12.3848830
+    },
+    {
+      "type": "node",
+      "id": 1813875426,
+      "lat": 47.0630774,
+      "lon": 12.3845857
+    },
+    {
+      "type": "node",
+      "id": 1813875428,
+      "lat": 47.0631322,
+      "lon": 12.3845368
+    },
+    {
+      "type": "node",
+      "id": 1813875430,
+      "lat": 47.0631775,
+      "lon": 12.3858413
+    },
+    {
+      "type": "node",
+      "id": 1813875432,
+      "lat": 47.0631942,
+      "lon": 12.3843444
+    },
+    {
+      "type": "node",
+      "id": 1813875434,
+      "lat": 47.0632823,
+      "lon": 12.3859916
+    },
+    {
+      "type": "node",
+      "id": 1813875435,
+      "lat": 47.0634014,
+      "lon": 12.3839282
+    },
+    {
+      "type": "node",
+      "id": 1813875438,
+      "lat": 47.0634562,
+      "lon": 12.3836589
+    },
+    {
+      "type": "node",
+      "id": 1813875439,
+      "lat": 47.0634658,
+      "lon": 12.3838373
+    },
+    {
+      "type": "node",
+      "id": 1813875443,
+      "lat": 47.0635115,
+      "lon": 12.3836104
+    },
+    {
+      "type": "node",
+      "id": 1813875446,
+      "lat": 47.0636413,
+      "lon": 12.3835139
+    },
+    {
+      "type": "node",
+      "id": 1813875448,
+      "lat": 47.0637356,
+      "lon": 12.3834818
+    },
+    {
+      "type": "node",
+      "id": 1813875450,
+      "lat": 47.0638299,
+      "lon": 12.3835387
+    },
+    {
+      "type": "node",
+      "id": 1813875461,
+      "lat": 47.0638754,
+      "lon": 12.3835139
+    },
+    {
+      "type": "node",
+      "id": 1813875462,
+      "lat": 47.0639158,
+      "lon": 12.3835362
+    },
+    {
+      "type": "node",
+      "id": 1813875463,
+      "lat": 47.0639226,
+      "lon": 12.3836623
+    },
+    {
+      "type": "node",
+      "id": 1813875464,
+      "lat": 47.0642157,
+      "lon": 12.3837386
+    },
+    {
+      "type": "node",
+      "id": 1813875466,
+      "lat": 47.0643920,
+      "lon": 12.3836826
+    },
+    {
+      "type": "node",
+      "id": 1813875467,
+      "lat": 47.0644110,
+      "lon": 12.3836092
+    },
+    {
+      "type": "node",
+      "id": 1813875468,
+      "lat": 47.0645373,
+      "lon": 12.3835847
+    },
+    {
+      "type": "node",
+      "id": 1813875469,
+      "lat": 47.0645658,
+      "lon": 12.3834838
+    },
+    {
+      "type": "node",
+      "id": 517354625,
+      "lat": 47.0649971,
+      "lon": 12.3862024
+    },
+    {
+      "type": "node",
+      "id": 517354640,
+      "lat": 47.0653058,
+      "lon": 12.3844968
+    },
+    {
+      "type": "node",
+      "id": 517354641,
+      "lat": 47.0654471,
+      "lon": 12.3847408
+    },
+    {
+      "type": "node",
+      "id": 517354642,
+      "lat": 47.0654947,
+      "lon": 12.3857516
+    },
+    {
+      "type": "node",
+      "id": 1813875471,
+      "lat": 47.0646992,
+      "lon": 12.3833369
+    },
+    {
+      "type": "node",
+      "id": 1813875472,
+      "lat": 47.0647093,
+      "lon": 12.3851488
+    },
+    {
+      "type": "node",
+      "id": 1813875473,
+      "lat": 47.0647284,
+      "lon": 12.3850264
+    },
+    {
+      "type": "node",
+      "id": 1813875474,
+      "lat": 47.0647474,
+      "lon": 12.3852677
+    },
+    {
+      "type": "node",
+      "id": 1813875475,
+      "lat": 47.0647546,
+      "lon": 12.3855335
+    },
+    {
+      "type": "node",
+      "id": 1813875476,
+      "lat": 47.0647755,
+      "lon": 12.3838545
+    },
+    {
+      "type": "node",
+      "id": 1813875477,
+      "lat": 47.0647784,
+      "lon": 12.3850019
+    },
+    {
+      "type": "node",
+      "id": 1813875478,
+      "lat": 47.0648040,
+      "lon": 12.3833964
+    },
+    {
+      "type": "node",
+      "id": 1813875479,
+      "lat": 47.0648046,
+      "lon": 12.3856279
+    },
+    {
+      "type": "node",
+      "id": 1813875480,
+      "lat": 47.0648237,
+      "lon": 12.3850544
+    },
+    {
+      "type": "node",
+      "id": 1813875481,
+      "lat": 47.0648403,
+      "lon": 12.3858133
+    },
+    {
+      "type": "node",
+      "id": 1813875482,
+      "lat": 47.0648493,
+      "lon": 12.3838161
+    },
+    {
+      "type": "node",
+      "id": 1813875483,
+      "lat": 47.0648946,
+      "lon": 12.3835433
+    },
+    {
+      "type": "node",
+      "id": 1813875484,
+      "lat": 47.0648951,
+      "lon": 12.3862959
+    },
+    {
+      "type": "node",
+      "id": 1813875485,
+      "lat": 47.0649303,
+      "lon": 12.3841028
+    },
+    {
+      "type": "node",
+      "id": 1813875486,
+      "lat": 47.0649332,
+      "lon": 12.3859182
+    },
+    {
+      "type": "node",
+      "id": 1813875487,
+      "lat": 47.0649380,
+      "lon": 12.3851803
+    },
+    {
+      "type": "node",
+      "id": 1813875488,
+      "lat": 47.0649470,
+      "lon": 12.3838056
+    },
+    {
+      "type": "node",
+      "id": 1813875489,
+      "lat": 47.0649827,
+      "lon": 12.3837111
+    },
+    {
+      "type": "node",
+      "id": 1813875490,
+      "lat": 47.0649875,
+      "lon": 12.3842672
+    },
+    {
+      "type": "node",
+      "id": 1813875491,
+      "lat": 47.0649999,
+      "lon": 12.3853376
+    },
+    {
+      "type": "node",
+      "id": 1813875492,
+      "lat": 47.0650262,
+      "lon": 12.3859252
+    },
+    {
+      "type": "node",
+      "id": 1813875493,
+      "lat": 47.0650714,
+      "lon": 12.3854041
+    },
+    {
+      "type": "node",
+      "id": 1813875494,
+      "lat": 47.0651048,
+      "lon": 12.3860826
+    },
+    {
+      "type": "node",
+      "id": 1813875495,
+      "lat": 47.0651167,
+      "lon": 12.3859846
+    },
+    {
+      "type": "node",
+      "id": 1813875496,
+      "lat": 47.0651566,
+      "lon": 12.3844071
+    },
+    {
+      "type": "node",
+      "id": 1813875497,
+      "lat": 47.0652024,
+      "lon": 12.3854880
+    },
+    {
+      "type": "node",
+      "id": 1813875498,
+      "lat": 47.0652376,
+      "lon": 12.3845330
+    },
+    {
+      "type": "node",
+      "id": 1813875499,
+      "lat": 47.0652572,
+      "lon": 12.3856314
+    },
+    {
+      "type": "node",
+      "id": 1813875503,
+      "lat": 47.0652674,
+      "lon": 12.3858677
+    },
+    {
+      "type": "node",
+      "id": 1813875505,
+      "lat": 47.0654073,
+      "lon": 12.3858308
+    },
+    {
+      "type": "node",
+      "id": 1813875507,
+      "lat": 47.0655237,
+      "lon": 12.3850266
+    },
+    {
+      "type": "node",
+      "id": 1813875511,
+      "lat": 47.0655041,
+      "lon": 12.3848464
+    },
+    {
+      "type": "node",
+      "id": 1813875513,
+      "lat": 47.0655664,
+      "lon": 12.3856032
+    },
+    {
+      "type": "node",
+      "id": 1813875515,
+      "lat": 47.0656538,
+      "lon": 12.3853589
+    },
+    {
+      "type": "node",
+      "id": 1813875516,
+      "lat": 47.0655966,
+      "lon": 12.3854484
+    },
+    {
+      "type": "node",
+      "id": 9050981302,
+      "lat": 47.0656550,
+      "lon": 12.3851860
+    },
+    {
+      "type": "node",
+      "id": 11035359014,
+      "lat": 47.0651101,
+      "lon": 12.3860388
+    },
+    {
+      "type": "node",
+      "id": 11035359017,
+      "lat": 47.0652255,
+      "lon": 12.3855484
+    },
+    {
+      "type": "node",
+      "id": 11035359018,
+      "lat": 47.0652911,
+      "lon": 12.3857180
+    },
+    {
+      "type": "node",
+      "id": 11035359662,
+      "lat": 47.0653520,
+      "lon": 12.3859297
+    },
+    {
+      "type": "node",
+      "id": 11035359663,
+      "lat": 47.0656739,
+      "lon": 12.3851156
+    },
+    {
+      "type": "node",
+      "id": 11035359664,
+      "lat": 47.0655677,
+      "lon": 12.3850872
+    },
+    {
+      "type": "node",
+      "id": 517354627,
+      "lat": 47.0644546,
+      "lon": 12.3863919
+    },
+    {
+      "type": "node",
+      "id": 517354628,
+      "lat": 47.0639613,
+      "lon": 12.3865181
+    },
+    {
+      "type": "node",
+      "id": 517354629,
+      "lat": 47.0637832,
+      "lon": 12.3865694
+    },
+    {
+      "type": "node",
+      "id": 517354631,
+      "lat": 47.0636488,
+      "lon": 12.3864878
+    },
+    {
+      "type": "node",
+      "id": 1813875465,
+      "lat": 47.0642519,
+      "lon": 12.3863519
+    },
+    {
+      "type": "node",
+      "id": 1813875470,
+      "lat": 47.0646545,
+      "lon": 12.3863833
+    },
+    {
+      "type": "node",
+      "id": 11035359002,
+      "lat": 47.0640835,
+      "lon": 12.3864482
+    },
+    {
+      "type": "node",
+      "id": 11035359661,
+      "lat": 47.0645253,
+      "lon": 12.3864895
+    }
+
+  ]
+}

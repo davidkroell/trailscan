@@ -129,7 +129,7 @@ const HikingQueryTemplate = `
 [out:json][timeout:25];
 (
   node["natural"~"peak|saddle|water|lake"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  way["natural"="water"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  way["natural"="water"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
 
   node["tourism"~"alpine_hut|wilderness_hut|mountain_hut|viewpoint"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
   way["tourism"~"alpine_hut|wilderness_hut|mountain_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
@@ -319,7 +319,7 @@ func FindVisitedAmenities(candidates []Point, amenities []*Amenity, op FindOptio
 	}
 
 	// build results
-	results := make([]VisitedAmenity, 0, len(state))
+	results := make([]VisitedAmenity, 0, 32)
 
 outer:
 	for _, amenity := range amenities {

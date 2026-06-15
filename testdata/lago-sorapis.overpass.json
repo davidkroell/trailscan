@@ -1,0 +1,1117 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-15T14:58:59Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+    {
+      "type": "node",
+      "id": 26864383,
+      "lat": 46.5069444,
+      "lon": 12.2116667,
+      "tags": {
+        "ele": "3205",
+        "name": "Punta Sorapiss",
+        "natural": "peak",
+        "prominence": "1085",
+        "wikidata": "Q24705615"
+      }
+    },
+    {
+      "type": "node",
+      "id": 290420596,
+      "lat": 46.5570248,
+      "lon": 12.2018532,
+      "tags": {
+        "ele": "1809",
+        "mountain_pass": "yes",
+        "name": "Passo Tre Croci - Son Zuógo",
+        "name:it": "Passo Tre Croci",
+        "name:lld": "Són Zuógo",
+        "natural": "saddle",
+        "wikidata": "Q729190",
+        "wikipedia": "it:Passo Tre Croci"
+      }
+    },
+    {
+      "type": "node",
+      "id": 302394467,
+      "lat": 46.5367268,
+      "lon": 12.2145923,
+      "tags": {
+        "ele": "2307",
+        "mountain_pass": "yes",
+        "name": "Forcella Marcuoira",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 434032395,
+      "lat": 46.5104998,
+      "lon": 12.1973642,
+      "tags": {
+        "ele": "2416",
+        "name": "Forcella Sora la Cengia del Banco",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2050428501,
+      "lat": 46.5273400,
+      "lon": 12.1837323,
+      "tags": {
+        "ele": "2352",
+        "name": "Monte Faloria",
+        "natural": "peak",
+        "wikidata": "Q16579617",
+        "wikipedia": "it:Monte Faloria"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5766788456,
+      "lat": 46.5082564,
+      "lon": 12.2335160,
+      "tags": {
+        "ele": "3005",
+        "name": "Punte Tre Sorelle",
+        "natural": "peak",
+        "note": "il posizionamento precedente cadeva su quota 2850, non congrua; riposizionate con CTR 029070 in \"posizione intermedia\" rispetto allo sviluppo complessivo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5766788457,
+      "lat": 46.5105998,
+      "lon": 12.2122053,
+      "tags": {
+        "ele": "3053",
+        "name": "Cima de Falkner",
+        "natural": "peak",
+        "note": "Erroneamente chiamata \"Zurlon\". La \"Punta Zurlon\" (2720m) è la cima al centro dello sperone nord occidentale dei due speroni che racchiudono il Circo dello Zurlon, subito dopo il Dito di Dio."
+      }
+    },
+    {
+      "type": "node",
+      "id": 5766788458,
+      "lat": 46.5062316,
+      "lon": 12.2179775,
+      "tags": {
+        "ele": "3002",
+        "name": "Monte della Caccia Grande",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5766788461,
+      "lat": 46.5306923,
+      "lon": 12.2131194,
+      "tags": {
+        "ele": "2670",
+        "name": "Cime del Laudo",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5766788462,
+      "lat": 46.5266492,
+      "lon": 12.2080525,
+      "tags": {
+        "alt_name": "Ra Zesta",
+        "ele": "2770",
+        "name": "La Cesta",
+        "natural": "peak",
+        "wikidata": "Q31628774"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5766788463,
+      "lat": 46.5155464,
+      "lon": 12.2184504,
+      "tags": {
+        "ele": "2603",
+        "name": "Dito di Dio",
+        "natural": "peak",
+        "wikidata": "Q24706120"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5766788464,
+      "lat": 46.5139351,
+      "lon": 12.2192207,
+      "tags": {
+        "ele": "2547",
+        "name": "Gusela del Rifugio",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5826756260,
+      "lat": 46.5198983,
+      "lon": 12.2383459,
+      "tags": {
+        "alt_name": "Croda del Fogo",
+        "ele": "2567",
+        "name": "Col del Fuoco",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10067387253,
+      "lat": 46.5179108,
+      "lon": 12.1926738,
+      "tags": {
+        "ele": "2700",
+        "name": "Forcella Nera",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10067387262,
+      "lat": 46.5161809,
+      "lon": 12.1917987,
+      "tags": {
+        "ele": "2847",
+        "name": "Punta Nera",
+        "name:ldl": "Ponta Negra",
+        "natural": "peak",
+        "wikidata": "Q31638715"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10181124358,
+      "lat": 46.5637586,
+      "lon": 12.2011381,
+      "tags": {
+        "ele": "2221",
+        "name": "Col da Varda",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12151583935,
+      "lat": 46.5059472,
+      "lon": 12.2284092,
+      "tags": {
+        "ele": "2828",
+        "name": "Forcella della Caccia Grande",
+        "natural": "saddle",
+        "note": "riportata la quota della Guida Berti 2828; sul foglio 029070 si apprezza una quota di 2840"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12151583936,
+      "lat": 46.5114430,
+      "lon": 12.2377830,
+      "tags": {
+        "ele": "2902",
+        "name": "Cime di Valbona",
+        "natural": "peak",
+        "note": "l'altra cima è quotata sul 029070 CTR a 2881,3 m"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13093022322,
+      "lat": 46.5221821,
+      "lon": 12.1957092,
+      "tags": {
+        "ele": "2633",
+        "name": "Ra Seleta",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13093022324,
+      "lat": 46.5299100,
+      "lon": 12.1928200,
+      "tags": {
+        "ele": "2298",
+        "name": "Col Siro",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13093022337,
+      "lat": 46.5261300,
+      "lon": 12.1896600,
+      "tags": {
+        "ele": "2309",
+        "name": "Forcella Faloria",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13093022338,
+      "lat": 46.5172100,
+      "lon": 12.1887900,
+      "tags": {
+        "ele": "2627",
+        "name": "Sella di Punta Nera",
+        "name:ldl": "Sela de Ponta Negra",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13093022339,
+      "lat": 46.5193400,
+      "lon": 12.1867000,
+      "tags": {
+        "ele": "2627",
+        "name": "Croda Rotta",
+        "name:ldl": "Croda Rota",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13204345195,
+      "lat": 46.5447520,
+      "lon": 12.2306510,
+      "tags": {
+        "name": "Col Cuco",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13204345200,
+      "lat": 46.5392390,
+      "lon": 12.2152950,
+      "tags": {
+        "ele": "2426",
+        "name": "Cime di Marcuoira - SO",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13204356601,
+      "lat": 46.5398350,
+      "lon": 12.2175810,
+      "tags": {
+        "ele": "2420",
+        "name": "Cime di Marcuoira - NE",
+        "natural": "peak"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13260125609,
+      "lat": 46.5647828,
+      "lon": 12.1836391,
+      "tags": {
+        "ele": "2110",
+        "name": "Forcella Son Forca",
+        "natural": "saddle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 38434535,
+      "nodes": [
+        454383730,
+        3647829127,
+        454383729,
+        3647829126,
+        454383731,
+        454383732,
+        3647829022,
+        454383733,
+        3647829023,
+        3647829018,
+        3647829125,
+        3647829024,
+        454383734,
+        3647829131,
+        3647829020,
+        3647829133,
+        3647829019,
+        3647829132,
+        3647829130,
+        454383735,
+        454383727,
+        454383736,
+        3647829129,
+        454383728,
+        454383737,
+        3647829128,
+        3647829021,
+        454383730
+      ],
+      "tags": {
+        "name": "Lago di Son Forca",
+        "name:lld": "Lago di Son Forcia",
+        "natural": "water",
+        "reservoir_type": "water_storage",
+        "water": "reservoir"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39461168,
+      "nodes": [
+        472590979,
+        5983896209,
+        830447505,
+        830447743,
+        830447993,
+        830447666,
+        472590980,
+        830447887,
+        830447706,
+        830447459,
+        830447847,
+        830447610,
+        830447930,
+        472590981,
+        830447692,
+        830448075,
+        830447823,
+        5983896210,
+        472590982,
+        472590983,
+        830447643,
+        472590984,
+        3308871615,
+        5983896211,
+        830448036,
+        830447788,
+        830447561,
+        5983896212,
+        830447607,
+        5983896213,
+        830447990,
+        472590985,
+        830447740,
+        830447501,
+        830447949,
+        5983896215,
+        830447703,
+        830448091,
+        6005614414,
+        6005614415,
+        6005614419,
+        6005614416,
+        6005614417,
+        6005614418,
+        5983896223,
+        5983896222,
+        5983896221,
+        5983896220,
+        5983896219,
+        5983896218,
+        5983896217,
+        472590988,
+        5983896201,
+        5983896202,
+        472590989,
+        5983896203,
+        830447843,
+        830447557,
+        5983896204,
+        5983896205,
+        472590990,
+        5983896206,
+        5983896207,
+        5983896208,
+        830447926,
+        830447684,
+        472590979
+      ],
+      "tags": {
+        "alt_name": "Lago di Sorapiss;Lago di Sorapis",
+        "fishing": "no",
+        "intermittent": "yes",
+        "name": "Lago del Sorapíss",
+        "name:de": "Sorapissee",
+        "name:lld": "Lago de Sorapísc",
+        "natural": "water",
+        "note": "Swimming Forbidden",
+        "salt": "no",
+        "tidal": "no",
+        "water": "lake",
+        "website": "https://www.lago-di-sorapis.de/",
+        "wikidata": "Q15410555",
+        "wikipedia": "it:Lago di Sorapiss"
+      }
+    },
+    {
+      "type": "way",
+      "id": 200789472,
+      "nodes": [
+        2107551645,
+        2107551635,
+        2107551629,
+        2107551640,
+        2107551645
+      ],
+      "tags": {
+        "addr:city": "Cortina d'Ampezzo",
+        "building": "yes",
+        "ele": "1928",
+        "name": "Rifugio Vandelli",
+        "tourism": "alpine_hut",
+        "wikidata": "Q3935392",
+        "wikipedia": "it:Rifugio Alfonso Vandelli"
+      }
+    },
+    {
+      "type": "way",
+      "id": 200789501,
+      "nodes": [
+        2107551751,
+        2107551715,
+        2107551742,
+        2107551725,
+        2107551755,
+        2107551775,
+        2107551751
+      ],
+      "tags": {
+        "building": "yes",
+        "fixme": "Import CTR Veneto. Verificare se amenity=shelter",
+        "name": "Rifugio Capanna Tondi",
+        "tourism": "alpine_hut"
+      }
+    },
+    {
+      "type": "node",
+      "id": 472590988,
+      "lat": 46.5207085,
+      "lon": 12.2217228
+    },
+    {
+      "type": "node",
+      "id": 5983896217,
+      "lat": 46.5206458,
+      "lon": 12.2217780
+    },
+    {
+      "type": "node",
+      "id": 5983896218,
+      "lat": 46.5206431,
+      "lon": 12.2218345
+    },
+    {
+      "type": "node",
+      "id": 5983896219,
+      "lat": 46.5205799,
+      "lon": 12.2218693
+    },
+    {
+      "type": "node",
+      "id": 5983896220,
+      "lat": 46.5205432,
+      "lon": 12.2219489
+    },
+    {
+      "type": "node",
+      "id": 5983896221,
+      "lat": 46.5204893,
+      "lon": 12.2219881
+    },
+    {
+      "type": "node",
+      "id": 5983896222,
+      "lat": 46.5204292,
+      "lon": 12.2220141
+    },
+    {
+      "type": "node",
+      "id": 5983896223,
+      "lat": 46.5203792,
+      "lon": 12.2220946
+    },
+    {
+      "type": "node",
+      "id": 6005614416,
+      "lat": 46.5200898,
+      "lon": 12.2224603
+    },
+    {
+      "type": "node",
+      "id": 6005614417,
+      "lat": 46.5202101,
+      "lon": 12.2223283
+    },
+    {
+      "type": "node",
+      "id": 6005614418,
+      "lat": 46.5203425,
+      "lon": 12.2222073
+    },
+    {
+      "type": "node",
+      "id": 472590981,
+      "lat": 46.5206555,
+      "lon": 12.2246711
+    },
+    {
+      "type": "node",
+      "id": 472590982,
+      "lat": 46.5204727,
+      "lon": 12.2250751
+    },
+    {
+      "type": "node",
+      "id": 472590983,
+      "lat": 46.5203613,
+      "lon": 12.2250323
+    },
+    {
+      "type": "node",
+      "id": 472590984,
+      "lat": 46.5199768,
+      "lon": 12.2249943
+    },
+    {
+      "type": "node",
+      "id": 472590985,
+      "lat": 46.5199786,
+      "lon": 12.2239992
+    },
+    {
+      "type": "node",
+      "id": 830447501,
+      "lat": 46.5197701,
+      "lon": 12.2238119
+    },
+    {
+      "type": "node",
+      "id": 830447561,
+      "lat": 46.5199446,
+      "lon": 12.2245013
+    },
+    {
+      "type": "node",
+      "id": 830447607,
+      "lat": 46.5199446,
+      "lon": 12.2241691
+    },
+    {
+      "type": "node",
+      "id": 830447643,
+      "lat": 46.5202519,
+      "lon": 12.2249513
+    },
+    {
+      "type": "node",
+      "id": 830447703,
+      "lat": 46.5196547,
+      "lon": 12.2230796
+    },
+    {
+      "type": "node",
+      "id": 830447740,
+      "lat": 46.5198832,
+      "lon": 12.2239799
+    },
+    {
+      "type": "node",
+      "id": 830447788,
+      "lat": 46.5200233,
+      "lon": 12.2245548
+    },
+    {
+      "type": "node",
+      "id": 830447823,
+      "lat": 46.5206028,
+      "lon": 12.2250635
+    },
+    {
+      "type": "node",
+      "id": 830447930,
+      "lat": 46.5207336,
+      "lon": 12.2245192
+    },
+    {
+      "type": "node",
+      "id": 830447949,
+      "lat": 46.5196325,
+      "lon": 12.2235120
+    },
+    {
+      "type": "node",
+      "id": 830447990,
+      "lat": 46.5200159,
+      "lon": 12.2240870
+    },
+    {
+      "type": "node",
+      "id": 830448036,
+      "lat": 46.5200036,
+      "lon": 12.2246477
+    },
+    {
+      "type": "node",
+      "id": 830448075,
+      "lat": 46.5206869,
+      "lon": 12.2249406
+    },
+    {
+      "type": "node",
+      "id": 830448091,
+      "lat": 46.5197922,
+      "lon": 12.2227832
+    },
+    {
+      "type": "node",
+      "id": 3308871615,
+      "lat": 46.5199897,
+      "lon": 12.2248460
+    },
+    {
+      "type": "node",
+      "id": 5983896210,
+      "lat": 46.5205356,
+      "lon": 12.2251111
+    },
+    {
+      "type": "node",
+      "id": 5983896211,
+      "lat": 46.5199632,
+      "lon": 12.2247442
+    },
+    {
+      "type": "node",
+      "id": 5983896212,
+      "lat": 46.5199262,
+      "lon": 12.2242637
+    },
+    {
+      "type": "node",
+      "id": 5983896213,
+      "lat": 46.5200024,
+      "lon": 12.2241298
+    },
+    {
+      "type": "node",
+      "id": 5983896215,
+      "lat": 46.5195993,
+      "lon": 12.2232779
+    },
+    {
+      "type": "node",
+      "id": 6005614414,
+      "lat": 46.5198564,
+      "lon": 12.2226214
+    },
+    {
+      "type": "node",
+      "id": 6005614415,
+      "lat": 46.5199426,
+      "lon": 12.2224958
+    },
+    {
+      "type": "node",
+      "id": 6005614419,
+      "lat": 46.5200010,
+      "lon": 12.2224737
+    },
+    {
+      "type": "node",
+      "id": 2107551715,
+      "lat": 46.5275247,
+      "lon": 12.1808045
+    },
+    {
+      "type": "node",
+      "id": 2107551725,
+      "lat": 46.5275609,
+      "lon": 12.1806571
+    },
+    {
+      "type": "node",
+      "id": 2107551742,
+      "lat": 46.5275933,
+      "lon": 12.1807034
+    },
+    {
+      "type": "node",
+      "id": 2107551751,
+      "lat": 46.5276191,
+      "lon": 12.1809392
+    },
+    {
+      "type": "node",
+      "id": 2107551755,
+      "lat": 46.5276305,
+      "lon": 12.1805549
+    },
+    {
+      "type": "node",
+      "id": 2107551775,
+      "lat": 46.5277572,
+      "lon": 12.1807357
+    },
+    {
+      "type": "node",
+      "id": 454383727,
+      "lat": 46.5648198,
+      "lon": 12.1805515
+    },
+    {
+      "type": "node",
+      "id": 454383728,
+      "lat": 46.5646620,
+      "lon": 12.1806429
+    },
+    {
+      "type": "node",
+      "id": 454383729,
+      "lat": 46.5643679,
+      "lon": 12.1804679
+    },
+    {
+      "type": "node",
+      "id": 454383730,
+      "lat": 46.5644561,
+      "lon": 12.1805495
+    },
+    {
+      "type": "node",
+      "id": 454383731,
+      "lat": 46.5643732,
+      "lon": 12.1802948
+    },
+    {
+      "type": "node",
+      "id": 454383732,
+      "lat": 46.5644347,
+      "lon": 12.1800926
+    },
+    {
+      "type": "node",
+      "id": 454383733,
+      "lat": 46.5646103,
+      "lon": 12.1797344
+    },
+    {
+      "type": "node",
+      "id": 454383734,
+      "lat": 46.5648245,
+      "lon": 12.1799148
+    },
+    {
+      "type": "node",
+      "id": 454383735,
+      "lat": 46.5648893,
+      "lon": 12.1804309
+    },
+    {
+      "type": "node",
+      "id": 454383736,
+      "lat": 46.5647355,
+      "lon": 12.1806079
+    },
+    {
+      "type": "node",
+      "id": 454383737,
+      "lat": 46.5645898,
+      "lon": 12.1806526
+    },
+    {
+      "type": "node",
+      "id": 3647829018,
+      "lat": 46.5647248,
+      "lon": 12.1796881
+    },
+    {
+      "type": "node",
+      "id": 3647829019,
+      "lat": 46.5649463,
+      "lon": 12.1801284
+    },
+    {
+      "type": "node",
+      "id": 3647829020,
+      "lat": 46.5649100,
+      "lon": 12.1799951
+    },
+    {
+      "type": "node",
+      "id": 3647829021,
+      "lat": 46.5645176,
+      "lon": 12.1805962
+    },
+    {
+      "type": "node",
+      "id": 3647829022,
+      "lat": 46.5645203,
+      "lon": 12.1799039
+    },
+    {
+      "type": "node",
+      "id": 3647829023,
+      "lat": 46.5646580,
+      "lon": 12.1796881
+    },
+    {
+      "type": "node",
+      "id": 3647829024,
+      "lat": 46.5647877,
+      "lon": 12.1797639
+    },
+    {
+      "type": "node",
+      "id": 3647829125,
+      "lat": 46.5647609,
+      "lon": 12.1797212
+    },
+    {
+      "type": "node",
+      "id": 3647829126,
+      "lat": 46.5643599,
+      "lon": 12.1803804
+    },
+    {
+      "type": "node",
+      "id": 3647829127,
+      "lat": 46.5644093,
+      "lon": 12.1805262
+    },
+    {
+      "type": "node",
+      "id": 3647829128,
+      "lat": 46.5645430,
+      "lon": 12.1806370
+    },
+    {
+      "type": "node",
+      "id": 3647829129,
+      "lat": 46.5647008,
+      "lon": 12.1806254
+    },
+    {
+      "type": "node",
+      "id": 3647829130,
+      "lat": 46.5649307,
+      "lon": 12.1802870
+    },
+    {
+      "type": "node",
+      "id": 3647829131,
+      "lat": 46.5648777,
+      "lon": 12.1799540
+    },
+    {
+      "type": "node",
+      "id": 3647829132,
+      "lat": 46.5649446,
+      "lon": 12.1802055
+    },
+    {
+      "type": "node",
+      "id": 3647829133,
+      "lat": 46.5649319,
+      "lon": 12.1800571
+    },
+    {
+      "type": "node",
+      "id": 472590989,
+      "lat": 46.5210092,
+      "lon": 12.2215893
+    },
+    {
+      "type": "node",
+      "id": 472590990,
+      "lat": 46.5213728,
+      "lon": 12.2221298
+    },
+    {
+      "type": "node",
+      "id": 830447557,
+      "lat": 46.5212578,
+      "lon": 12.2217818
+    },
+    {
+      "type": "node",
+      "id": 830447843,
+      "lat": 46.5211900,
+      "lon": 12.2216478
+    },
+    {
+      "type": "node",
+      "id": 830447926,
+      "lat": 46.5215532,
+      "lon": 12.2224579
+    },
+    {
+      "type": "node",
+      "id": 5983896201,
+      "lat": 46.5208323,
+      "lon": 12.2216476
+    },
+    {
+      "type": "node",
+      "id": 5983896202,
+      "lat": 46.5209164,
+      "lon": 12.2215853
+    },
+    {
+      "type": "node",
+      "id": 5983896203,
+      "lat": 46.5210896,
+      "lon": 12.2215961
+    },
+    {
+      "type": "node",
+      "id": 5983896204,
+      "lat": 46.5213004,
+      "lon": 12.2219330
+    },
+    {
+      "type": "node",
+      "id": 5983896205,
+      "lat": 46.5213142,
+      "lon": 12.2220458
+    },
+    {
+      "type": "node",
+      "id": 5983896206,
+      "lat": 46.5214147,
+      "lon": 12.2222275
+    },
+    {
+      "type": "node",
+      "id": 5983896207,
+      "lat": 46.5214787,
+      "lon": 12.2222576
+    },
+    {
+      "type": "node",
+      "id": 5983896208,
+      "lat": 46.5215360,
+      "lon": 12.2223180
+    },
+    {
+      "type": "node",
+      "id": 472590979,
+      "lat": 46.5215103,
+      "lon": 12.2227514
+    },
+    {
+      "type": "node",
+      "id": 472590980,
+      "lat": 46.5210639,
+      "lon": 12.2234753
+    },
+    {
+      "type": "node",
+      "id": 830447459,
+      "lat": 46.5209425,
+      "lon": 12.2239370
+    },
+    {
+      "type": "node",
+      "id": 830447505,
+      "lat": 46.5212871,
+      "lon": 12.2230176
+    },
+    {
+      "type": "node",
+      "id": 830447610,
+      "lat": 46.5208245,
+      "lon": 12.2242977
+    },
+    {
+      "type": "node",
+      "id": 830447666,
+      "lat": 46.5211573,
+      "lon": 12.2233455
+    },
+    {
+      "type": "node",
+      "id": 830447684,
+      "lat": 46.5215446,
+      "lon": 12.2226126
+    },
+    {
+      "type": "node",
+      "id": 830447692,
+      "lat": 46.5207434,
+      "lon": 12.2247763
+    },
+    {
+      "type": "node",
+      "id": 830447706,
+      "lat": 46.5210088,
+      "lon": 12.2238191
+    },
+    {
+      "type": "node",
+      "id": 830447743,
+      "lat": 46.5212625,
+      "lon": 12.2231429
+    },
+    {
+      "type": "node",
+      "id": 830447847,
+      "lat": 46.5208663,
+      "lon": 12.2240763
+    },
+    {
+      "type": "node",
+      "id": 830447887,
+      "lat": 46.5210327,
+      "lon": 12.2235791
+    },
+    {
+      "type": "node",
+      "id": 830447993,
+      "lat": 46.5212416,
+      "lon": 12.2232545
+    },
+    {
+      "type": "node",
+      "id": 2107551629,
+      "lat": 46.5215982,
+      "lon": 12.2266684
+    },
+    {
+      "type": "node",
+      "id": 2107551635,
+      "lat": 46.5216656,
+      "lon": 12.2267336
+    },
+    {
+      "type": "node",
+      "id": 2107551640,
+      "lat": 46.5216813,
+      "lon": 12.2265020
+    },
+    {
+      "type": "node",
+      "id": 2107551645,
+      "lat": 46.5217472,
+      "lon": 12.2265730
+    },
+    {
+      "type": "node",
+      "id": 5983896209,
+      "lat": 46.5214274,
+      "lon": 12.2228588
+    }
+
+  ]
+}
