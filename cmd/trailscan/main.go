@@ -100,6 +100,11 @@ and other geographic features encountered along the route.`,
 					return nil
 				},
 			},
+			&cli.BoolFlag{
+				Name:  "no-simplify-gpx",
+				Value: false,
+				Usage: "disables simplifying GPX tracks (disables speedup)",
+			},
 		},
 		Action: func(ctx context.Context, cmd *cli.Command) error {
 			file, err := os.Open(cmd.StringArg("gpxfile"))
@@ -109,7 +114,11 @@ and other geographic features encountered along the route.`,
 			defer file.Close()
 
 			maxDistanceFlag := cmd.Float64("max-distance")
-			points, bbox, err := trailscan.LoadGPX(file, maxDistanceFlag/4)
+			reduceFlag := maxDistanceFlag
+			if cmd.Bool("no-simplify-gpx") {
+				reduceFlag = 0
+			}
+			points, bbox, err := trailscan.LoadGPX(file, reduceFlag)
 			if err != nil {
 				return fmt.Errorf("cannot load gpx file: %w", err)
 			}

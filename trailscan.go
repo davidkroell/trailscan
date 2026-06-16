@@ -60,22 +60,27 @@ type OverpassResponse struct {
 		Lat  float64 `json:"lat"`
 		Lon  float64 `json:"lon"`
 		Tags struct {
-			Name    string `json:"name"`
-			Natural string `json:"natural"`
-			Place   string `json:"place"`
-			Tourism string `json:"tourism"`
-			Ele     string `json:"ele"`
+			Name        string `json:"name"`
+			Natural     string `json:"natural"`
+			Place       string `json:"place"`
+			Tourism     string `json:"tourism"`
+			ShelterType string `json:"shelter_type"`
+			Ele         string `json:"ele"`
 		} `json:"tags"`
 	} `json:"elements"`
 }
 
+// LoadGPX loads the gpx data from the reader gpxReader.
+// Does a simplification GPX.SimplifyTracks() if a value for simplifyDistance greater than 0 is provided.
 func LoadGPX(gpxReader io.Reader, simplifyDistance float64) ([]Point, BoundingBox, error) {
 	gpxData, err := gpx.Parse(gpxReader)
 	if err != nil {
 		return nil, BoundingBox{}, err
 	}
 
-	gpxData.SimplifyTracks(simplifyDistance) // reduces the number of points by factor 2 to 10
+	if simplifyDistance > 0 {
+		gpxData.SimplifyTracks(simplifyDistance) // reduces the number of points by factor 2 to 10
+	}
 
 	points := make([]Point, 0, 1000) // a typical gpx file has at least a few hundred points
 
@@ -234,7 +239,7 @@ func FetchAmenities(ctx context.Context, bbox BoundingBox, op FetchOptions) ([]*
 
 		amenity := Amenity{
 			ID:   e.ID,
-			Type: cmp.Or(e.Tags.Natural, e.Tags.Place, e.Tags.Tourism),
+			Type: cmp.Or(e.Tags.Natural, e.Tags.Place, e.Tags.Tourism, e.Tags.ShelterType),
 			Name: e.Tags.Name,
 			Ele:  ele,
 			Lat:  e.Lat,
