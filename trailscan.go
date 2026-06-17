@@ -41,6 +41,27 @@ type Amenity struct {
 	ParentWay *Amenity
 }
 
+func (a *Amenity) GetName() string {
+	if a.ParentWay != nil {
+		return a.ParentWay.GetName()
+	}
+	return a.Name
+}
+
+func (a *Amenity) GetElevation() float64 {
+	if a.ParentWay != nil {
+		return a.ParentWay.GetElevation()
+	}
+	return a.Ele
+}
+
+func (a *Amenity) GetType() string {
+	if a.ParentWay != nil {
+		return a.ParentWay.GetType()
+	}
+	return a.Type
+}
+
 type VisitedAmenity struct {
 	Amenity        *Amenity
 	Distance       float64

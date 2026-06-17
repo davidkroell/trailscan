@@ -1,6 +1,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"errors"
@@ -105,6 +106,18 @@ and other geographic features encountered along the route.`,
 				Value: false,
 				Usage: "disables simplifying GPX tracks (disables speedup)",
 			},
+			&cli.StringFlag{
+				Name:    "sort",
+				Aliases: []string{"s"},
+				Value:   "num",
+				Usage:   "sort the output (only in case of text output)",
+			},
+			&cli.BoolFlag{
+				Name:    "sort-inverted",
+				Aliases: []string{"si"},
+				Value:   false,
+				Usage:   "invert the sorting, default: ascending",
+			},
 		},
 		Action: func(ctx context.Context, cmd *cli.Command) error {
 			file, err := os.Open(cmd.StringArg("gpxfile"))
@@ -151,30 +164,47 @@ and other geographic features encountered along the route.`,
 
 			switch cmd.String("output") {
 			case "text":
+				sortingField := cmd.String("sort")
+
+				invertFactor := 1
+				if cmd.Bool("sort-inverted") {
+					invertFactor = -1
+				}
+
+				slices.SortFunc(visited, func(a, b trailscan.VisitedAmenity) int {
+					var r int
+					switch sortingField {
+					case "name":
+						r = cmp.Compare(a.Amenity.GetName(), b.Amenity.GetName())
+					case "type":
+						r = cmp.Compare(a.Amenity.GetType(), b.Amenity.GetType())
+					case "lat":
+						r = cmp.Compare(a.Amenity.Lat, b.Amenity.Lat)
+					case "lon":
+						r = cmp.Compare(a.Amenity.Lon, b.Amenity.Lon)
+					case "elevation":
+						r = cmp.Compare(a.Amenity.Ele, b.Amenity.Ele)
+					case "num":
+						fallthrough
+					default:
+						r = cmp.Compare(a.VisitedIndex, b.VisitedIndex)
+					}
+
+					return r * invertFactor
+				})
+
 				w := tabwriter.NewWriter(cmd.Writer, 0, 0, 2, ' ', 0)
 				_, _ = fmt.Fprintf(w, "NUM\tNAME\tTYPE\tLAT\tLON\tELEVATION\tTRACKED ELEVATION\tDISTANCE\n")
 
 				for _, v := range visited {
-					var amType, name string
-					var ele float64
-					if v.Amenity.ParentWay != nil {
-						name = v.Amenity.ParentWay.Name
-						ele = v.Amenity.ParentWay.Ele
-						amType = v.Amenity.ParentWay.Type
-					} else {
-						name = v.Amenity.Name
-						ele = v.Amenity.Ele
-						amType = v.Amenity.Type
-					}
-
 					_, _ = fmt.Fprintf(w,
 						"%3d\t%s\t%s\t%0.5f\t%0.5f\t%.0fm\t%.0fm\t%.1fm\n",
 						v.VisitedIndex,
-						name,
-						amType,
+						v.Amenity.GetName(),
+						v.Amenity.GetType(),
 						v.Amenity.Lat,
 						v.Amenity.Lon,
-						ele,
+						v.Amenity.GetElevation(),
 						v.TrackElevation,
 						v.Distance,
 					)
