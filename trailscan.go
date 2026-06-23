@@ -62,6 +62,13 @@ func (a *Amenity) GetType() string {
 	return a.Type
 }
 
+func (a *Amenity) GetID() int64 {
+	if a.ParentWay != nil {
+		return a.ParentWay.GetID()
+	}
+	return a.ID
+}
+
 type VisitedAmenity struct {
 	Amenity        *Amenity
 	Distance       float64
@@ -69,6 +76,20 @@ type VisitedAmenity struct {
 	VisitedIndex   int
 
 	sortingNum int
+}
+
+func (v *VisitedAmenity) MarshalJSON() ([]byte, error) {
+	return json.Marshal(map[string]interface{}{
+		"num":            v.VisitedIndex,
+		"id":             v.Amenity.GetID(),
+		"name":           v.Amenity.GetName(),
+		"type":           v.Amenity.GetType(),
+		"lat":            v.Amenity.Lat,
+		"lon":            v.Amenity.Lon,
+		"ele":            v.Amenity.Ele,
+		"trackElevation": v.TrackElevation,
+		"trackDistance":  v.Distance,
+	})
 }
 
 type OverpassResponse struct {

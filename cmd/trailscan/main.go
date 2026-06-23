@@ -12,8 +12,18 @@ import (
 	"text/tabwriter"
 
 	"github.com/davidkroell/trailscan"
+	"github.com/tkrajina/gpxgo/gpx"
 	"github.com/urfave/cli/v3"
 )
+
+type waypointJson struct {
+	Lat  float64 `json:"lat"`
+	Lon  float64 `json:"lon"`
+	Ele  float64 `json:"ele"`
+	Name string  `json:"name"`
+	ID   int64   `json:"id"`
+	Type string  `json:"type"`
+}
 
 func main() {
 	supportedQueryTemplates := make([]string, 0, len(trailscan.AllTemplates))
@@ -26,7 +36,7 @@ func main() {
 		UsageText: "trailscan <track.gpx> [OPTIONS]",
 		Name:      "trailscan",
 		ArgsUsage: "<track.gpx>",
-		Usage:     "a tool for analyzing GPX tracks using data from OpenStreetMap.",
+		Usage:     "a tool for analyzing GPX tracks using data from OpenStreetMap",
 		Description: `trailscan is a tool for analyzing GPX tracks using data from OpenStreetMap.
 It matches recorded GPS positions against geographic features to determine where a track passes and what locations were visited.
 The resulting track can be annotated with information such as mountain summits, landmarks, points of interest,
@@ -225,6 +235,98 @@ and other geographic features encountered along the route.`,
 
 					for _, name := range supportedQueryTemplates {
 						_, _ = fmt.Fprintf(cmd.Writer, "template: %s\n%s\n---\n", name, trailscan.AllTemplates[name])
+					}
+
+					return nil
+				},
+			},
+			{
+				UsageText: "trailscan annotate",
+				Name:      "annotate",
+				Usage:     "Annotates a GPX file with waypoints using a JSON input, outputs a GPX file annotated with the provided waypoints",
+				Arguments: []cli.Argument{
+					&cli.StringArg{
+						Name:      "gpxfile",
+						UsageText: "path to the gpx file",
+					},
+				},
+				Flags: []cli.Flag{
+					&cli.StringFlag{
+						Name:    "output",
+						Aliases: []string{"o"},
+						Usage:   "path to the output file to use, specify none will print to stdout",
+					},
+					&cli.StringFlag{
+						Name:    "input",
+						Aliases: []string{"i"},
+						Usage:   "path to the input JSON file to use, specify none will read from stdin",
+					},
+				},
+				Action: func(ctx context.Context, cmd *cli.Command) error {
+					reader := cmd.Reader
+					writer := cmd.Writer
+
+					outPath := cmd.String("output")
+					if outPath != "" {
+						f, err := os.OpenFile(outPath, os.O_RDWR|os.O_CREATE, 0644)
+						if err != nil {
+							return fmt.Errorf("opening output file: %w", err)
+						}
+						defer f.Close()
+						writer = f
+					}
+
+					inPath := cmd.String("input")
+					if inPath != "" {
+						f, err := os.Open(inPath)
+						if err != nil {
+							return fmt.Errorf("opening input file: %w", err)
+						}
+						defer f.Close()
+						reader = f
+					}
+
+					gpxData, err := gpx.ParseFile(cmd.StringArg("gpxfile"))
+					if err != nil {
+						return fmt.Errorf("parsing gpx file: %w", err)
+					}
+
+					waypoints := make([]waypointJson, 0)
+
+					err = json.NewDecoder(reader).Decode(&waypoints)
+					if err != nil {
+						return fmt.Errorf("cannot read input waypoint file %w", err)
+					}
+
+					for _, w := range waypoints {
+						ele := gpx.NullableFloat64{}
+						if w.Ele > 0 {
+							ele.SetValue(w.Ele)
+						}
+
+						gpxData.AppendWaypoint(&gpx.GPXPoint{
+							Point: gpx.Point{
+								Latitude:  w.Lat,
+								Longitude: w.Lon,
+								Elevation: ele,
+							},
+							Name:   w.Name,
+							Type:   w.Type,
+							Source: fmt.Sprintf("osmID: %d", w.ID),
+						})
+					}
+
+					outBytes, err := gpxData.ToXml(gpx.ToXmlParams{
+						Indent: true,
+					})
+
+					if err != nil {
+						return fmt.Errorf("error marshalling GPX to XML: %w", err)
+					}
+
+					_, err = writer.Write(outBytes)
+					if err != nil {
+						return fmt.Errorf("error writing output: %w", err)
 					}
 
 					return nil
