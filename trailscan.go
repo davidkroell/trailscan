@@ -1,7 +1,6 @@
 package trailscan
 
 import (
-	"bytes"
 	"cmp"
 	"context"
 	"encoding/json"
@@ -13,7 +12,6 @@ import (
 	"sort"
 	"strconv"
 	"strings"
-	"text/template"
 
 	"github.com/tkrajina/gpxgo/gpx"
 )
@@ -79,7 +77,7 @@ type VisitedAmenity struct {
 }
 
 func (v *VisitedAmenity) MarshalJSON() ([]byte, error) {
-	return json.Marshal(map[string]interface{}{
+	return json.Marshal(map[string]any{
 		"num":            v.VisitedIndex,
 		"id":             v.Amenity.GetID(),
 		"name":           v.Amenity.GetName(),
@@ -104,6 +102,9 @@ type OverpassResponse struct {
 		Tags struct {
 			Name        string `json:"name"`
 			Natural     string `json:"natural"`
+			Amenity     string `json:"amenity"`
+			Shop        string `json:"shop"`
+			Craft       string `json:"craft"`
 			Place       string `json:"place"`
 			Tourism     string `json:"tourism"`
 			ShelterType string `json:"shelter_type"`
@@ -169,25 +170,64 @@ type FetchOptions struct {
 
 const PeaksQueryTemplate = `
 [out:json][timeout:20];
-node["natural"="peak"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+node["natural"="peak"]({{bbox}});
 out body;`
 
 const HikingQueryTemplate = `
 [out:json][timeout:25];
 (
-  node["natural"~"peak|saddle|water|lake"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  way["natural"="water"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["natural"~"peak|saddle|water|lake"]["name"]({{bbox}});
+  way["natural"="water"]["name"]({{bbox}});
 
-  node["tourism"~"alpine_hut|wilderness_hut|mountain_hut|viewpoint"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  way["tourism"~"alpine_hut|wilderness_hut|mountain_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  relation["tourism"~"alpine_hut|wilderness_hut|mountain_hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["tourism"~"alpine_hut|wilderness_hut|mountain_hut|viewpoint"]["name"]({{bbox}});
+  way["tourism"~"alpine_hut|wilderness_hut|mountain_hut"]({{bbox}});
+  relation["tourism"~"alpine_hut|wilderness_hut|mountain_hut"]({{bbox}});
   
-  node["amenity"="shelter"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  way["amenity"="shelter"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  relation["amenity"="shelter"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["amenity"="shelter"]({{bbox}});
+  way["amenity"="shelter"]({{bbox}});
+  relation["amenity"="shelter"]({{bbox}});
   
-  node["building"="hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  way["building"="hut"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["building"="hut"]({{bbox}});
+  way["building"="hut"]({{bbox}});
+
+  node["natural"="spring"]({{bbox}});
+  way["waterway"="stream"]({{bbox}});
+);
+out body;
+>;
+out skel qt;
+`
+
+const SuppliesQueryTemplate = `
+[out:json][timeout:25];
+(
+  nwr["natural"~"spring|water"]["name"]({{bbox}});
+
+  nwr["amenity"="drinking_water"]({{bbox}});
+  nwr["amenity"="water_point"]({{bbox}});
+
+  nwr["amenity"="fountain"]({{bbox}});
+  nwr["man_made"="water_well"]({{bbox}});
+  nwr["amenity"="water_point"]({{bbox}});
+
+  nwr["amenity"~"restaurant|cafe|fast_food|food_court|bar|pub|biergarten|ice_cream"]({{bbox}});
+
+  nwr["tourism"~"alpine_hut|mountain_hut"]({{bbox}});
+
+  // Supermarkets and grocery stores
+  nwr["shop"~"supermarket|convenience|general|grocery|food"]({{bbox}});
+
+  // More specialized food shops
+  nwr["shop"~"bakery|butcher|confectionery|deli|cheese|farm|greengrocer|seafood|beverages"]({{bbox}});
+
+  nwr["amenity"="fuel"]({{bbox}});
+  nwr["amenity"="marketplace"]({{bbox}});
+  nwr["shop"~"farm|greengrocer"]({{bbox}});
+
+  nwr["craft"~"winery|brewery"]({{bbox}});
+  nwr["amenity"~"brewery|winery"]({{bbox}});
+
+  nwr["tourism"="camp_site"]({{bbox}});
 );
 out body;
 >;
@@ -197,25 +237,26 @@ out skel qt;
 const VillagesQueryTemplate = `
 [out:json][timeout:20];
 
-node[place~"city|town|village"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+node[place~"city|town|village"]({{bbox}});
 
 out body;`
 
 const CyclingQueryTemplate = `
 [out:json][timeout:20];
 (
-  node[place~"city|town|village"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
-  node["natural"="saddle"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node[place~"city|town|village"]({{bbox}});
+  node["natural"="saddle"]({{bbox}});
 
-  node["tourism"="viewpoint"]["name"]({{.MinLat}},{{.MinLon}},{{.MaxLat}},{{.MaxLon}});
+  node["tourism"="viewpoint"]["name"]({{bbox}});
 );
 out body;`
 
 var AllTemplates = map[string]string{
-	"peaks":   PeaksQueryTemplate,
-	"hiking":  HikingQueryTemplate,
-	"village": VillagesQueryTemplate,
-	"cycling": CyclingQueryTemplate,
+	"peaks":    PeaksQueryTemplate,
+	"hiking":   HikingQueryTemplate,
+	"village":  VillagesQueryTemplate,
+	"cycling":  CyclingQueryTemplate,
+	"supplies": SuppliesQueryTemplate,
 }
 
 func DefaultFetchOptions() FetchOptions {
@@ -226,14 +267,8 @@ func DefaultFetchOptions() FetchOptions {
 }
 
 func FetchAmenities(ctx context.Context, bbox BoundingBox, op FetchOptions) ([]*Amenity, error) {
-	queryBuf := new(bytes.Buffer)
-	err := template.Must(template.New("query").Parse(op.QueryTemplate)).ExecuteTemplate(queryBuf, "query", bbox)
-	if err != nil {
-		return nil, fmt.Errorf("error templating query: %w", err)
-	}
-
-	query := strings.ReplaceAll(queryBuf.String(), "\n", "")
-	query = strings.ReplaceAll(query, "\t", "")
+	bboxStr := fmt.Sprintf("%f,%f,%f,%f", bbox.MinLat, bbox.MinLon, bbox.MaxLat, bbox.MaxLon)
+	query := strings.ReplaceAll(op.QueryTemplate, "{{bbox}}", bboxStr)
 
 	req, err := http.NewRequestWithContext(ctx,
 		http.MethodPost,
@@ -281,7 +316,7 @@ func FetchAmenities(ctx context.Context, bbox BoundingBox, op FetchOptions) ([]*
 
 		amenity := Amenity{
 			ID:   e.ID,
-			Type: cmp.Or(e.Tags.Natural, e.Tags.Place, e.Tags.Tourism, e.Tags.ShelterType),
+			Type: cmp.Or(e.Tags.Natural, e.Tags.Place, e.Tags.Tourism, e.Tags.ShelterType, e.Tags.Amenity, e.Tags.Shop, e.Tags.Craft),
 			Name: e.Tags.Name,
 			Ele:  ele,
 			Lat:  e.Lat,
@@ -382,6 +417,7 @@ outer:
 			for _, alreadyResult := range results {
 				if alreadyResult.Amenity.ParentWay != nil && amenity.ParentWay.ID == alreadyResult.Amenity.ParentWay.ID {
 					// found -> skip this
+					// TODO multiple passes?
 					continue outer
 				}
 			}
