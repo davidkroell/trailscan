@@ -163,6 +163,29 @@ func LoadGPX(gpxReader io.Reader, simplifyDistance float64) ([]Point, BoundingBo
 	return points, bbox, nil
 }
 
+// TrackSummary holds aggregate statistics for a track.
+type TrackSummary struct {
+	DistanceMeters      float64
+	ElevationGainMeters float64
+}
+
+// Summarize computes aggregate distance and elevation gain for a sequence of track points.
+func Summarize(points []Point) TrackSummary {
+	var summary TrackSummary
+
+	for i := 1; i < len(points); i++ {
+		prev, cur := points[i-1], points[i]
+
+		summary.DistanceMeters += gpx.HaversineDistance(prev.Lat, prev.Lon, cur.Lat, cur.Lon)
+
+		if diff := cur.Ele - prev.Ele; diff > 0 {
+			summary.ElevationGainMeters += diff
+		}
+	}
+
+	return summary
+}
+
 type FetchOptions struct {
 	QueryTemplate string
 	Endpoint      string

@@ -60,3 +60,49 @@ func TestTrailscan(t *testing.T) {
 
 	// TODO assert visited
 }
+
+func TestSummarize(t *testing.T) {
+	tests := []struct {
+		name              string
+		points            []trailscan.Point
+		wantDistance      float64
+		wantElevationGain float64
+	}{
+		{
+			name:              "empty",
+			points:            nil,
+			wantDistance:      0,
+			wantElevationGain: 0,
+		},
+		{
+			name:              "single point",
+			points:            []trailscan.Point{{Lat: 47.0, Lon: 13.0, Ele: 100}},
+			wantDistance:      0,
+			wantElevationGain: 0,
+		},
+		{
+			name: "ascending then descending",
+			points: []trailscan.Point{
+				{Lat: 47.0, Lon: 13.0, Ele: 100},
+				{Lat: 47.001, Lon: 13.0, Ele: 150},
+				{Lat: 47.002, Lon: 13.0, Ele: 120},
+			},
+			wantDistance:      1,
+			wantElevationGain: 50,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			summary := trailscan.Summarize(tt.points)
+
+			require.Equal(t, tt.wantElevationGain, summary.ElevationGainMeters)
+
+			if tt.wantDistance == 0 {
+				require.Zero(t, summary.DistanceMeters)
+			} else {
+				require.Greater(t, summary.DistanceMeters, 0.0)
+			}
+		})
+	}
+}
